@@ -30,8 +30,8 @@ A collection of **100% FREE** to use portfolio website templates.
 
 ## 🎨 Templates
 
-<h3><a href="https://ossphilippines.github.io/freefolio/hacker">Hacker</a></h3>
-<img src="./images/hacker.png" alt="hacker-screenshot"/>
+<h3><a href="https://uvacoder.github.io/simple-projects/simple-hn">HackerNews</a></h3>
+<img src="./images/screenshot-hn.png" alt="hackernews-screenshot"/>
 
 <h3><a href="https://ossphilippines.github.io/freefolio/indify">Indify</a></h3>
 <img src="./images/indify.png" alt="indify-screenshot"/>
