@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HAPPY BIRTHDAY M8</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍑</text></svg>"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Rach's lockdown birthday" />
+    <meta property="og:description" content="Happy birthday m8" />
+    <meta property="og:image" content="meta.jpg" />
+    <meta property="og:url" content="https://lockdown-birthday.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, But Recommended -->
+
+    <meta property="og:site_name" content="Rach's lockdown birthday" />
+    <meta
+      name="twitter:image:alt"
+      content="woman celebrating with corona box on head"
+    />
+
+    <!--  Non-Essential, But Required for Analytics -->
+
+    <meta property="fb:app_id" content="your_app_id" />
+    <meta name="twitter:site" content="@website-username" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="hero">
+      <canvas id="canvas"></canvas>
+      <div class="copy flow">
+        <marquee scrollamount="20"><h1>IT'S YOUR GODAMN BIRTHDAY!</h1></marquee>
+
+        <div class="img-cont"><img src="img/winning.jpg" /></div>
+
+        <h2>Do you want confetti?</h2>
+        <p>
+          Of <strong>course</strong> you bloody want confetti. click, drag &
+          release
+        </p>
+      </div>
+    </div>
+    <section class="compliments">
+      <div class="compliments_inner flow">
+        <h2 class="h2">COMPLIMENT GENERATOR</h2>
+
+        <button class="js-button button">gimme a compliment</button>
+
+        <div class="quote">
+          <blockquote class="js-compliment">
+            You are an ancient leather purse
+          </blockquote>
+          <cite class="js-person">Locke</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="compliments compliments--music">
+      <div class="compliments_inner flow">
+        <h2 class="h2">Happy Birthday Mate <3</h2>
+        <div class="flex">
+          <div class="flow">
+            <p>Here's a banging birthday mix for you.</p>
+            <audio controls>
+              <source
+                src="RACHES_BIG_FAT_BIRTHDAY_TUNEZ.mp3"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio element.
+            </audio>
+            <a
+              class="button"
+              href="https://wetransfer.com/downloads/3e87f1d4703a228e7220944f3784c03320200516134410/36f0fa"
+              target="_blank"
+              >DOWNLOAD TUNEZ</a
+            >
+            <p>All the love and virtual gropes.</p>
+            <h3>Oli & Cassie</h3>
+          </div>
+          <img
+            class="cat"
+            src="https://media.giphy.com/media/kFCGvlQML6ySA/giphy.gif"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+    <script src="js/Physics2DPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
