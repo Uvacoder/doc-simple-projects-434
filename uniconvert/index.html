@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/zeroing_css.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>UniConv</title>
+	</head>
+
+	<body>
+		<div class="app">
+			<div class="app__body">
+				<div class="app__body_header">
+					<h1>UniConv</h1>
+					<div class="app__body_dropdown-btn"></div>
+				</div>
+				<div class="app__body_main">
+					<div class="app__body_dropdown hidden">
+						<h3 class="app__body_dropdown-label">Category:</h3>
+						<ul class="app__body_dropdown-list">
+							<li><button class="active">Currency</button></li>
+							<li><button>Weight</button></li>
+							<li><button>Length</button></li>
+							<li><button>Temperature</button></li>
+							<li><button>Speed</button></li>
+						</ul>
+					</div>
+					<div class="converter">
+						<div class="converter__container">
+							<select class="converter__category converter__element">
+								<option value="currency" selected>Currency</option>
+							</select>
+							<input type="number" class="converter__input_value converter__element" placeholder="Amount"></input>
+							<select class="converter__input_unit converter__element">
+								<optgroup label="Common Currencies">
+									<option value="EUR" selected>Euro</option>
+									<option value="USD">US dollar</option>
+									<option value="GBP">Pound sterling</option>
+									<option value="CHF">Swiss franc</option>
+									<option value="CNY">Chinese yuan</option>
+									<option value="JPY">Japanese yen</option>
+								</optgroup>
+								<!-- Another currencies will be added from JSON file -->
+							</select>
+							<button class="converter__switch-button"></button>
+							<input type="text" class="converter__output_value converter__element" readonly></input>
+							<select class="converter__output_unit converter__element">
+								<optgroup label="Common Currencies">
+									<option value="EUR">Euro</option>
+									<option value="USD" selected>US dollar</option>
+									<option value="GBP">Pound sterling</option>
+									<option value="CHF">Swiss franc</option>
+									<option value="CNY">Chinese yuan</option>
+									<option value="JPY">Japanese yen</option>
+								</optgroup>
+							</select>
+							<button class="converter__button converter__element">Convert</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="js/index.js"></script>
+		
+	</body>
+</html>

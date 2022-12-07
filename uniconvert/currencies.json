@@ -1,0 +1,623 @@
+{
+	"AED": {
+		"currency_name": "United Arab Emirates dirham",
+		"currency_code": "AED"
+	},
+	"AFN": {
+		"currency_name": "Afghan afghani",
+		"currency_code": "AFN"
+	},
+	"ALL": {
+		"currency_name": "Albanian lek",
+		"currency_code": "ALL"
+	},
+	"AMD": {
+		"currency_name": "Armenian dram",
+		"currency_code": "AMD"
+	},
+	"ANG": {
+		"currency_name": "Netherlands Antillean guilder",
+		"currency_code": "ANG"
+	},
+	"AOA": {
+		"currency_name": "Angolan kwanza",
+		"currency_code": "AOA"
+	},
+	"ARS": {
+		"currency_name": "Argentine peso",
+		"currency_code": "ARS"
+	},
+	"AUD": {
+		"currency_name": "Australian dollar",
+		"currency_code": "AUD"
+	},
+	"AWG": {
+		"currency_name": "Aruban florin",
+		"currency_code": "AWG"
+	},
+	"AZN": {
+		"currency_name": "Azerbaijani manat",
+		"currency_code": "AZN"
+	},
+	"BAM": {
+		"currency_name": "Bosnia and Herzegovina convertible mark",
+		"currency_code": "BAM"
+	},
+	"BBD": {
+		"currency_name": "Barbados dollar",
+		"currency_code": "BBD"
+	},
+	"BDT": {
+		"currency_name": "Bangladeshi taka",
+		"currency_code": "BDT"
+	},
+	"BGN": {
+		"currency_name": "Bulgarian lev",
+		"currency_code": "BGN"
+	},
+	"BHD": {
+		"currency_name": "Bahraini dinar",
+		"currency_code": "BHD"
+	},
+	"BIF": {
+		"currency_name": "Burundian franc",
+		"currency_code": "BIF"
+	},
+	"BMD": {
+		"currency_name": "Bermudian dollar",
+		"currency_code": "BMD"
+	},
+	"BND": {
+		"currency_name": "Brunei dollar",
+		"currency_code": "BND"
+	},
+	"BOB": {
+		"currency_name": "Boliviano",
+		"currency_code": "BOB"
+	},
+	"BOV": {
+		"currency_name": "Bolivian Mvdol",
+		"currency_code": "BOV"
+	},
+	"BRL": {
+		"currency_name": "Brazilian real",
+		"currency_code": "BRL"
+	},
+	"BSD": {
+		"currency_name": "Bahamian dollar",
+		"currency_code": "BSD"
+	},
+	"BTN": {
+		"currency_name": "Bhutanese ngultrum",
+		"currency_code": "BTN"
+	},
+	"BWP": {
+		"currency_name": "Botswana pula",
+		"currency_code": "BWP"
+	},
+	"BYN": {
+		"currency_name": "Belarusian ruble",
+		"currency_code": "BYN"
+	},
+	"BZD": {
+		"currency_name": "Belize dollar",
+		"currency_code": "BZD"
+	},
+	"CAD": {
+		"currency_name": "Canadian dollar",
+		"currency_code": "CAD"
+	},
+	"CDF": {
+		"currency_name": "Congolese franc",
+		"currency_code": "CDF"
+	},
+	"CLP": {
+		"currency_name": "Chilean peso",
+		"currency_code": "CLP"
+	},
+	"COP": {
+		"currency_name": "Colombian peso",
+		"currency_code": "COP"
+	},
+	"COU": {
+		"currency_name": "Unidad de Valor Real",
+		"currency_code": "COU"
+	},
+	"CRC": {
+		"currency_name": "Costa Rican colon",
+		"currency_code": "CRC"
+	},
+	"CUC": {
+		"currency_name": "Cuban convertible peso",
+		"currency_code": "CUC"
+	},
+	"CUP": {
+		"currency_name": "Cuban peso",
+		"currency_code": "CUP"
+	},
+	"CVE": {
+		"currency_name": "Cape Verdean escudo",
+		"currency_code": "CVE"
+	},
+	"CZK": {
+		"currency_name": "Czech koruna",
+		"currency_code": "CZK"
+	},
+	"DJF": {
+		"currency_name": "Djiboutian franc",
+		"currency_code": "DJF"
+	},
+	"DKK": {
+		"currency_name": "Danish krone",
+		"currency_code": "DKK"
+	},
+	"DOP": {
+		"currency_name": "Dominican peso",
+		"currency_code": "DOP"
+	},
+	"DZD": {
+		"currency_name": "Algerian dinar",
+		"currency_code": "DZD"
+	},
+	"EGP": {
+		"currency_name": "Egyptian pound",
+		"currency_code": "EGP"
+	},
+	"ERN": {
+		"currency_name": "Eritrean nakfa",
+		"currency_code": "ERN"
+	},
+	"ETB": {
+		"currency_name": "Ethiopian birr",
+		"currency_code": "ETB"
+	},
+	"FJD": {
+		"currency_name": "Fiji dollar",
+		"currency_code": "FJD"
+	},
+	"FKP": {
+		"currency_name": "Falkland Islands pound",
+		"currency_code": "FKP"
+	},
+	"GEL": {
+		"currency_name": "Georgian lari",
+		"currency_code": "GEL"
+	},
+	"GHS": {
+		"currency_name": "Ghanaian cedi",
+		"currency_code": "GHS"
+	},
+	"GIP": {
+		"currency_name": "Gibraltar pound",
+		"currency_code": "GIP"
+	},
+	"GMD": {
+		"currency_name": "Gambian dalasi",
+		"currency_code": "GMD"
+	},
+	"GNF": {
+		"currency_name": "Guinean franc",
+		"currency_code": "GNF"
+	},
+	"GTQ": {
+		"currency_name": "Guatemalan quetzal",
+		"currency_code": "GTQ"
+	},
+	"GYD": {
+		"currency_name": "Guyanese dollar",
+		"currency_code": "GYD"
+	},
+	"HKD": {
+		"currency_name": "Hong Kong dollar",
+		"currency_code": "HKD"
+	},
+	"HNL": {
+		"currency_name": "Honduran lempira",
+		"currency_code": "HNL"
+	},
+	"HRK": {
+		"currency_name": "Croatian kuna",
+		"currency_code": "HRK"
+	},
+	"HTG": {
+		"currency_name": "Haitian gourde",
+		"currency_code": "HTG"
+	},
+	"HUF": {
+		"currency_name": "Hungarian forint",
+		"currency_code": "HUF"
+	},
+	"IDR": {
+		"currency_name": "Indonesian rupiah",
+		"currency_code": "IDR"
+	},
+	"ILS": {
+		"currency_name": "Israeli new shekel",
+		"currency_code": "ILS"
+	},
+	"INR": {
+		"currency_name": "Indian rupee",
+		"currency_code": "INR"
+	},
+	"IQD": {
+		"currency_name": "Iraqi dinar",
+		"currency_code": "IQD"
+	},
+	"IRR": {
+		"currency_name": "Iranian rial",
+		"currency_code": "IRR"
+	},
+	"ISK": {
+		"currency_name": "Icelandic krona",
+		"currency_code": "ISK"
+	},
+	"JMD": {
+		"currency_name": "Jamaican dollar",
+		"currency_code": "JMD"
+	},
+	"JOD": {
+		"currency_name": "Jordanian dinar",
+		"currency_code": "JOD"
+	},
+
+	"KES": {
+		"currency_name": "Kenyan shilling",
+		"currency_code": "KES"
+	},
+	"KGS": {
+		"currency_name": "Kyrgyzstani som",
+		"currency_code": "KGS"
+	},
+	"KHR": {
+		"currency_name": "Cambodian riel",
+		"currency_code": "KHR"
+	},
+	"KMF": {
+		"currency_name": "Comoro franc",
+		"currency_code": "KMF"
+	},
+	"KPW": {
+		"currency_name": "North Korean won",
+		"currency_code": "KPW"
+	},
+	"KRW": {
+		"currency_name": "South Korean won",
+		"currency_code": "KRW"
+	},
+	"KWD": {
+		"currency_name": "Kuwaiti dinar",
+		"currency_code": "KWD"
+	},
+	"KYD": {
+		"currency_name": "Cayman Islands dollar",
+		"currency_code": "KYD"
+	},
+	"KZT": {
+		"currency_name": "Kazakhstani tenge",
+		"currency_code": "KZT"
+	},
+	"LAK": {
+		"currency_name": "Lao kip",
+		"currency_code": "LAK"
+	},
+	"LBP": {
+		"currency_name": "Lebanese pound",
+		"currency_code": "LBP"
+	},
+	"LKR": {
+		"currency_name": "Sri Lankan rupee",
+		"currency_code": "LKR"
+	},
+	"LRD": {
+		"currency_name": "Liberian dollar",
+		"currency_code": "LRD"
+	},
+	"LSL": {
+		"currency_name": "Lesotho loti",
+		"currency_code": "LSL"
+	},
+	"LYD": {
+		"currency_name": "Libyan dinar",
+		"currency_code": "LYD"
+	},
+	"MAD": {
+		"currency_name": "Moroccan dirham",
+		"currency_code": "MAD"
+	},
+	"MDL": {
+		"currency_name": "Moldovan leu",
+		"currency_code": "MDL"
+	},
+	"MGA": {
+		"currency_name": "Malagasy ariary",
+		"currency_code": "MGA"
+	},
+	"MKD": {
+		"currency_name": "Macedonian denar",
+		"currency_code": "MKD"
+	},
+	"MMK": {
+		"currency_name": "Myanmar kyat",
+		"currency_code": "MMK"
+	},
+	"MNT": {
+		"currency_name": "Mongolian tugrik",
+		"currency_code": "MNT"
+	},
+	"MOP": {
+		"currency_name": "Macanese pataca",
+		"currency_code": "MOP"
+	},
+	"MRU": {
+		"currency_name": "Mauritanian ouguiya",
+		"currency_code": "MRU"
+	},
+	"MUR": {
+		"currency_name": "Mauritian rupee",
+		"currency_code": "MUR"
+	},
+	"MVR": {
+		"currency_name": "Maldivian rufiyaa",
+		"currency_code": "MVR"
+	},
+	"MWK": {
+		"currency_name": "Malawian kwacha",
+		"currency_code": "MWK"
+	},
+	"MXN": {
+		"currency_name": "Mexican peso",
+		"currency_code": "MXN"
+	},
+	"MXV": {
+		"currency_name": "Mexican Unidad de Inversion (UDI)",
+		"currency_code": "MXV"
+	},
+	"MYR": {
+		"currency_name": "Malaysian ringgit",
+		"currency_code": "MYR"
+	},
+	"MZN": {
+		"currency_name": "Mozambican metical",
+		"currency_code": "MZN"
+	},
+	"NAD": {
+		"currency_name": "Namibian dollar",
+		"currency_code": "NAD"
+	},
+	"NGN": {
+		"currency_name": "Nigerian naira",
+		"currency_code": "NGN"
+	},
+	"NIO": {
+		"currency_name": "Nicaraguan cordoba",
+		"currency_code": "NIO"
+	},
+	"NOK": {
+		"currency_name": "Norwegian krone",
+		"currency_code": "NOK"
+	},
+	"NPR": {
+		"currency_name": "Nepalese rupee",
+		"currency_code": "NPR"
+	},
+	"NZD": {
+		"currency_name": "New Zealand dollar",
+		"currency_code": "NZD"
+	},
+	"OMR": {
+		"currency_name": "Omani rial",
+		"currency_code": "OMR"
+	},
+	"PAB": {
+		"currency_name": "Panamanian balboa",
+		"currency_code": "PAB"
+	},
+	"PEN": {
+		"currency_name": "Peruvian sol",
+		"currency_code": "PEN"
+	},
+	"PGK": {
+		"currency_name": "Papua New Guinean kina",
+		"currency_code": "PGK"
+	},
+	"PHP": {
+		"currency_name": "Philippine peso[13]",
+		"currency_code": "PHP"
+	},
+	"PKR": {
+		"currency_name": "Pakistani rupee",
+		"currency_code": "PKR"
+	},
+	"PLN": {
+		"currency_name": "Polish zloty",
+		"currency_code": "PLN"
+	},
+	"PYG": {
+		"currency_name": "Paraguayan guarani",
+		"currency_code": "PYG"
+	},
+	"QAR": {
+		"currency_name": "Qatari riyal",
+		"currency_code": "QAR"
+	},
+	"RON": {
+		"currency_name": "Romanian leu",
+		"currency_code": "RON"
+	},
+	"RSD": {
+		"currency_name": "Serbian dinar",
+		"currency_code": "RSD"
+	},
+	"RUB": {
+		"currency_name": "Russian ruble",
+		"currency_code": "RUB"
+	},
+	"RWF": {
+		"currency_name": "Rwandan franc",
+		"currency_code": "RWF"
+	},
+	"SAR": {
+		"currency_name": "Saudi riyal",
+		"currency_code": "SAR"
+	},
+	"SBD": {
+		"currency_name": "Solomon Islands dollar",
+		"currency_code": "SBD"
+	},
+	"SCR": {
+		"currency_name": "Seychelles rupee",
+		"currency_code": "SCR"
+	},
+	"SDG": {
+		"currency_name": "Sudanese pound",
+		"currency_code": "SDG"
+	},
+	"SEK": {
+		"currency_name": "Swedish krona",
+		"currency_code": "SEK"
+	},
+	"SGD": {
+		"currency_name": "Singapore dollar",
+		"currency_code": "SGD"
+	},
+	"SHP": {
+		"currency_name": "Saint Helena pound",
+		"currency_code": "SHP"
+	},
+	"SLL": {
+		"currency_name": "Sierra Leonean leone",
+		"currency_code": "SLL"
+	},
+	"SOS": {
+		"currency_name": "Somali shilling",
+		"currency_code": "SOS"
+	},
+	"SRD": {
+		"currency_name": "Surinamese dollar",
+		"currency_code": "SRD"
+	},
+	"SSP": {
+		"currency_name": "South Sudanese pound",
+		"currency_code": "SSP"
+	},
+	"STN": {
+		"currency_name": "Sao Tome and Principe dobra",
+		"currency_code": "STN"
+	},
+	"SVC": {
+		"currency_name": "Salvadoran colon",
+		"currency_code": "SVC"
+	},
+	"SYP": {
+		"currency_name": "Syrian pound",
+		"currency_code": "SYP"
+	},
+	"SZL": {
+		"currency_name": "Swazi lilangeni",
+		"currency_code": "SZL"
+	},
+	"THB": {
+		"currency_name": "Thai baht",
+		"currency_code": "THB"
+	},
+	"TJS": {
+		"currency_name": "Tajikistani somoni",
+		"currency_code": "TJS"
+	},
+	"TMT": {
+		"currency_name": "Turkmenistan manat",
+		"currency_code": "TMT"
+	},
+	"TND": {
+		"currency_name": "Tunisian dinar",
+		"currency_code": "TND"
+	},
+	"TOP": {
+		"currency_name": "Tongan pa'anga",
+		"currency_code": "TOP"
+	},
+	"TRY": {
+		"currency_name": "Turkish lira",
+		"currency_code": "TRY"
+	},
+	"TTD": {
+		"currency_name": "Trinidad and Tobago dollar",
+		"currency_code": "TTD"
+	},
+	"TWD": {
+		"currency_name": "New Taiwan dollar",
+		"currency_code": "TWD"
+	},
+	"TZS": {
+		"currency_name": "Tanzanian shilling",
+		"currency_code": "TZS"
+	},
+	"UAH": {
+		"currency_name": "Ukrainian hryvnia",
+		"currency_code": "UAH"
+	},
+	"UGX": {
+		"currency_name": "Ugandan shilling",
+		"currency_code": "UGX"
+	},
+	"UYU": {
+		"currency_name": "Uruguayan peso",
+		"currency_code": "UYU"
+	},
+	"UYW": {
+		"currency_name": "Unidad previsional[15]",
+		"currency_code": "UYW"
+	},
+	"UZS": {
+		"currency_name": "Uzbekistan som",
+		"currency_code": "UZS"
+	},
+	"VES": {
+		"currency_name": "Venezuelan bolivar soberano[13]",
+		"currency_code": "VES"
+	},
+	"VND": {
+		"currency_name": "Vietnamese dong",
+		"currency_code": "VND"
+	},
+	"VUV": {
+		"currency_name": "Vanuatu vatu",
+		"currency_code": "VUV"
+	},
+	"WST": {
+		"currency_name": "Samoan tala",
+		"currency_code": "WST"
+	},
+	"XAF": {
+		"currency_name": "CFA franc BEAC",
+		"currency_code": "XAF"
+	},
+	"XCD": {
+		"currency_name": "East Caribbean dollar",
+		"currency_code": "XCD"
+	},
+	"XOF": {
+		"currency_name": "CFA franc BCEAO",
+		"currency_code": "XOF"
+	},
+	"XPF": {
+		"currency_name": "CFP franc (franc Pacifique)",
+		"currency_code": "XPF"
+	},
+	"YER": {
+		"currency_name": "Yemeni rial",
+		"currency_code": "YER"
+	},
+	"ZAR": {
+		"currency_name": "South African rand",
+		"currency_code": "ZAR"
+	},
+	"ZMW": {
+		"currency_name": "Zambian kwacha",
+		"currency_code": "ZMW"
+	},
+	"ZWL": {
+		"currency_name": "Zimbabwean dollar",
+		"currency_code": "ZWL"
+	}
+}
