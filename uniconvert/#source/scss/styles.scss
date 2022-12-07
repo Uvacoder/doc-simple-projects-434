@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap');
+
+$background-gradient: linear-gradient(45deg, #1e1e2a 0%, #3f434f 100%);
+$logo-gradient: linear-gradient(to right, #8a2387, #e94057, #f27121);
+$color-text-dark: #2b2b2b;
+$color-text-light: #e2e2e2;
+$color-btn: #e5941b;
+$color-dropdown-selection: #e94057b9;
+$font-logo: 'Pacifico', 'Open Sans', sans-serif;
+$font-main: 'Open Sans', sans-serif;
+
+//mixin for flex routine:
+@mixin flex-center-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+//mixin for fast positioning in grid:
+@mixin grid-pos($column_start, $column_end, $row_start, $row_end) {
+	grid-column-start: $column_start;
+	grid-column-end: $column_end;
+	grid-row-start: $row_start;
+	grid-row-end: $row_end;
+}
+
+html {
+	font-size: 10px; //used to calculate rem
+}
+
+body {
+	background: $background-gradient;
+	@include flex-center-col();
+}
+.app {
+	@include flex-center-col();
+	width: 100vw;
+
+	&__body {
+		@include flex-center-col();
+		max-width: 850px;
+		width: 95%;
+		background: rgba(255, 255, 255, 0.42);
+		box-shadow: 4px 4px 20px 7px rgba(0, 0, 0, 0.25);
+		backdrop-filter: blur(4px);
+		border-radius: 2.5rem;
+		position: relative;
+
+		&_header {
+			@include flex-center-col();
+			padding: 3.4rem;
+			width: 100%;
+			background: rgba(242, 242, 242, 0.9);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 25px 25px 0px 0px;
+			h1 {
+				font-family: $font-logo;
+				font-size: 5rem;
+				background: -webkit-$logo-gradient;
+				background: $logo-gradient;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		&_dropdown {
+			@include flex-center-col();
+			transform-origin: top center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(39, 39, 39, 0.959);
+			border-radius: 0 0 2.5rem 2.5rem;
+			transition: all ease 0.3s;
+
+			&.hidden {
+				opacity: 0;
+				transform: scaleY(0);
+				transform-origin: top center;
+				transition: all ease 0.3s;
+			}
+			&-btn {
+				display: block;
+				position: absolute;
+				height: 0.3rem;
+				width: 3rem;
+				background-color: #000;
+				right: 40px;
+				border-radius: 0.3rem;
+				transition: all ease 0.3s;
+				&::before,
+				&::after {
+					position: absolute;
+					content: '';
+					height: 0.3rem;
+					width: 3rem;
+					background-color: #000;
+					border-radius: 0.3rem;
+				}
+				&::before {
+					top: -8px;
+					right: 0;
+				}
+				&::after {
+					top: 8px;
+				}
+				&.active {
+					transform: rotate(45deg);
+					transform-origin: center center;
+					&::before {
+						top: 0px;
+						transform: rotate(90deg);
+						transform-origin: center center;
+					}
+					&::after {
+						display: none;
+					}
+				}
+			}
+			h3 {
+				text-align: center;
+				color: $color-text-light;
+				font-size: 3rem;
+				font-family: $font-main;
+				margin-bottom: 3rem;
+				margin-top: 3rem;
+			}
+			ul {
+				width: 100%;
+				@include flex-center-col();
+				li {
+					width: 100%;
+					@include flex-center-col();
+					button {
+						width: 90%;
+						padding: 2rem;
+						font-size: 2rem;
+						font-family: $font-main;
+						color: $color-text-light;
+						background: none;
+						border: #ffffff1f 0 0 0.1px 0 solid;
+						transition: all ease 0.3s;
+						border: 0.1px #ffffff1e;
+						border-style: solid none solid none;
+						&:hover {
+							border: $color-dropdown-selection solid 3px;
+							transition: all ease 0.3s;
+						}
+						&.active {
+							background: $color-dropdown-selection;
+						}
+					}
+				}
+			}
+		}
+		&_main {
+			@include flex-center-col();
+			position: relative;
+			width: 100%;
+		}
+		&_dropdown {
+			display: none;
+			&-btn {
+				display: none;
+			}
+		}
+	}
+}
+
+.converter {
+	@include flex-center-col();
+	width: 80%;
+	max-width: 74rem;
+	margin: 4rem 0;
+	&__container {
+		display: grid;
+		column-gap: 0;
+		row-gap: 0;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+		max-width: 74rem;
+		width: 100%;
+	}
+
+	&__category {
+		@include grid-pos(3, 11, 1, 2);
+	}
+
+	&__element {
+		background-color: #fff;
+		background-color: #e8e8e8;
+		border-radius: 1rem;
+		padding: 1.4rem 2.8rem;
+		font-family: $font-main;
+		color: $color-text-dark;
+		font-size: 2rem;
+		box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+	}
+
+	&__input {
+		&_value {
+			@include grid-pos(1, 7, 3, 4);
+		}
+
+		&_unit {
+			@include grid-pos(8, 13, 3, 4);
+		}
+	}
+
+	&__switch-button {
+		@include grid-pos(10, 11, 4, 5);
+		height: 30px;
+		width: 30px;
+		background: none;
+		background-image: url(../img/arrow-up-down.svg);
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+	&__output {
+		&_value {
+			@include grid-pos(1, 7, 5, 6);
+		}
+		&_unit {
+			@include grid-pos(8, 13, 5, 6);
+		}
+	}
+
+	&__button {
+		@include grid-pos(5, 9, 7, 8);
+		background: $color-btn;
+		color: #fff;
+		transition: all ease 0.3s;
+		&:hover {
+			box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+			background-color: darken($color: $color-btn, $amount: 2%);
+			transform: translateY(1.5px);
+			transition: all ease 0.3s;
+		}
+		&:active {
+			background-color: darken($color: $color-btn, $amount: 4%);
+		}
+	}
+}
+
+//Setting custom arrow symbol for all <select> elements:
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background-image: url('../img/arrow-down.svg');
+	background-position: 95% center;
+	background-repeat: no-repeat;
+}
+
+//Version for smartphones:
+@media screen and (max-width: 600px) and (orientation: portrait) {
+	html {
+		font-size: 9px; //used to calculate rem
+	}
+	.app__body_dropdown-btn,
+	.app__body_dropdown {
+		display: block;
+	}
+
+	.converter {
+		width: 95%;
+		height: 100%;
+		&__container {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+			row-gap: 1rem;
+		}
+		&__category {
+			display: none;
+		}
+		&__input {
+			&_value {
+				@include grid-pos(1, 2, 1, 2);
+			}
+			&_unit {
+				@include grid-pos(1, 2, 2, 3);
+			}
+		}
+		&__switch-button {
+			@include grid-pos(1, 2, 3, 4);
+		}
+		&__output {
+			&_value {
+				@include grid-pos(1, 2, 4, 5);
+			}
+			&_unit {
+				@include grid-pos(1, 2, 5, 6);
+			}
+		}
+		&__button {
+			@include grid-pos(1, 2, 6, 7);
+		}
+		&__element {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+	.app__body_dropdown-btn,
+	.app__body_dropdown {
+		display: block;
+	}
+	.app__body_dropdown ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.converter {
+		&__container {
+			row-gap: 1em;
+			grid-template-columns: repeat(11, 1fr);
+			grid-template-rows: 1fr 0.1fr 1fr 1fr;
+		}
+		&__category {
+			display: none;
+		}
+		&__input {
+			&_value {
+				@include grid-pos(1, 5, 1, 2);
+			}
+
+			&_unit {
+				@include grid-pos(1, 5, 3, 4);
+			}
+		}
+		&__switch-button {
+			@include grid-pos(6, 7, 2, 3);
+			margin: -4rem;
+			transform: rotate(90deg);
+		}
+		&__output {
+			&_value {
+				@include grid-pos(8, 12, 1, 2);
+			}
+			&_unit {
+				@include grid-pos(8, 12, 3, 4);
+			}
+		}
+		&__button {
+			@include grid-pos(4, 9, 4, 5);
+		}
+	}
+}
