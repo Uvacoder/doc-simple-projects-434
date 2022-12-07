@@ -1,0 +1,10 @@
+@use "../config/vars" as *;
+
+.body {
+	padding: 0 $unit-gap / 2;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: $light-color;
+	background-color: $dark-color;
+}
