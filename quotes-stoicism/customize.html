@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="Customize the theme of the Stoic homepage website, light or dark theme available.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Customize</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
+</head>
+<body>
+  <nav></nav>
+  <section class="main">
+    <h1>Customize this website</h1>
+    <div>
+      <h2>Theme</h2>  
+      <p>If you use the home page as your start page, you may wish to customize the theme. Your preference will be kept even if you close the page.</p>
+    
+      Choose a theme:
+      <form>
+        <input type="radio" name="theme" id="light" value="light" checked/>
+        <label for="light">Light</label>
+        <input type="radio" name="theme" id="dark" value="dark"/>
+        <label for="dark">Dark</label>
+      </form>
+    </div>
+    <div>
+      <h2>Quotes option</h2>
+      <p>You can choose between two frequencies for the quotes refresh: a new one every time you go to the home page or one per day.</p>
+
+      Choose the quote lifespan:
+      <form>
+        <input type="radio" name="lifespan" id="short" value="short" checked/>
+        <label for="short">One every page refresh</label>
+        <input type="radio" name="lifespan" id="long" value="long"/>
+        <label for="long">One per day</label>
+      </form>
+    </div>
+  </section>
+  <footer class="container">
+    <div class="footer-row">
+      © Romain Cascino &#8211; 2018
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+  <script src="customize.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const nav = document.querySelector('nav');
+    const footer = document.querySelector('footer');
+    const light = document.querySelector('#light');
+    const dark = document.querySelector('#dark');
+    const short = document.querySelector('#short');
+    const long = document.querySelector('#long');
+    
+    nav.innerHTML = navContent;
+    const customizeLink = document.querySelector('.customize');
+    customizeLink.classList.add('active');
+
+    if (localStorage.getItem('theme')) {
+      localStorage.getItem('theme') === 'light' ? light.checked = true : dark.checked = true;
+    }
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, nav]);
+    }
+    
+    light.addEventListener('change', () => {
+      localStorage.setItem('theme', 'light');
+      setDarkClass(false, [body, footer, nav]);
+    });
+
+    dark.addEventListener('change', () => {
+      localStorage.setItem('theme', 'dark');
+      setDarkClass(true, [body, footer, nav]);
+    });
+
+    if (localStorage.getItem('lifespan')) {
+      localStorage.getItem('lifespan') === 'short' ? short.checked = true : long.checked = true;
+    }
+
+    short.addEventListener('change', () => {
+      localStorage.setItem('lifespan', 'short');
+    });
+
+    long.addEventListener('change', () => {
+      localStorage.setItem('lifespan', 'long');
+    });
+
+  </script>
+  <script src="fathom.js"></script>
+</body>
+</html>

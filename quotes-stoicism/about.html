@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="About this website, who am I, why did I create this website and more information.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About stoic homepage</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
+</head>
+<body>
+  <nav></nav>
+  <section class="main">
+    <h1>About</h1>
+    <h2>Who am I and what is this website?</h2>
+    <p>I'm Romain Cascino, a french software engineer that recently came into <a href="resources.html">Stoicism</a>. I created this website for a personal need: have a reminder of my favorite quotes (around 100) from famous Stoics every time I open my browser on my phone and computer.</p>
+    <p>Feel free to set this website as your browser homepage (you can even choose between <a href="customize.html">light and dark theme</a>). Furthermore, this website is guaranteed <strong>ad-free</strong>. If you want to help me pay the hosting or just support me, you can use <a href="https://paypal.me/RomainCascino">this paypal link</a>.</p>
+    <h2>Contact and sources</h2>
+    <p>The source code is <a href="https://github.com/RomainCscn/stoic-start-page/tree/master">available on Github</a>. You can contribute to the quotes list by submitting a pull request.</p>
+    <p>For any request, you can contact me using <a href="mailto:contact@romaincascino.com">this email address</a>.</p>
+    <div class="about-message">
+      <p>Hope you enjoy this website, wishing you the best Stoic journey.</p>
+    </div>
+  </section>
+  <footer class="container">
+    <div class="footer-row">
+      © Romain Cascino &#8211; 2018
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+  <script src="customize.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const nav = document.querySelector('nav');
+    const footer = document.querySelector('footer');
+    const links = document.querySelectorAll('a');
+
+    nav.innerHTML = navContent;
+    const aboutLink = document.querySelector('.about');
+    aboutLink.classList.add('active');
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
+    }
+  </script>
+  <script src="fathom.js"></script>
+</body>
+</html>
