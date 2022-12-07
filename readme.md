@@ -1,33 +1,10 @@
 # Free Portfolio Website Templates
-<p>
-  <a href="https://github.com/OSSPhilippines/freefolio/blob/main/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" height="20" alt="PRs Welcome"> 
-  <a href="https://github.com/OSSPhilippines/freefolio/blob/main/LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square">
-  <a href="https://github.com/OSSPhilippines/freefolio/blob/main/CODE_OF_CONDUCT.md">
-    <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-green.svg?style=flat-square">
-  <a href="https://github.com/OSSPhilippines/freefolio/stargazers">
-    <img alt="GitHub Stars" src="https://badgen.net/github/stars/OSSPhilippines/freefolio/?style=flat-square">
-  <a href="https://github.com/OSSPhilippines/freefolio/network">
-    <img alt="GitHub Forks" src="https://badgen.net/github/forks/OSSPhilippines/freefolio/?style=flat-square">
-</p>
 
 A collection of **100% FREE** to use portfolio website templates.
 
 ## ⚡ Features
 
-✅ Fast
-
-✅ FREE
-
-✅ Mobile Responsive
-
-✅ SEO Friendly
-
-✅ Compatible with any web server
-
-✅ 0 Dependencies
-
+✅ 
 ## 🎨 Templates
 
 <h3><a href="https://uvacoder.github.io/simple-projects/simple-hn">HackerNews</a></h3>
@@ -36,8 +13,8 @@ A collection of **100% FREE** to use portfolio website templates.
 <h3><a href="https://uvacoder.github.io/simple-projects/simple-birthday-site">Birthday Site</a></h3>
 <img src="./images/screenshot-bday-site.png" alt="bday-site-screenshot"/>
 
-<h3><a href="https://ossphilippines.github.io/freefolio/plain">Plain</a></h3>
-<img src="./images/plain.png" alt="plain-screenshot"/>
+<h3><a href="https://uvacoder.github.io/simple-projects/simple-password-generator">Password Generator</a></h3>
+<img src="./images/screenshot-password-generator.png" alt="password-generator-screenshot"/>
   
 <h3><a href="https://ossphilippines.github.io/freefolio/beginner">Beginner</a></h3>
 <img src="./images/beginner.png" alt="beginner-screenshot"/>
