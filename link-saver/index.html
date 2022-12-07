@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Save Strings</title>
+	<link rel="stylesheet" href="./css/styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="module" src="./js/scripts.js"></script>
+</head>
+
+<body class="body">
+	<header class="main-header">
+		<h1 class="title">Link saver</h1>
+	</header>
+	<form id="form-app" class="form-app">
+		<fieldset>
+			<label for="string-to-save" class="form-app__label">
+				Title:
+				<input autofocus name="title" type="text" id="string-to-save" class="form-app__input" placeholder="e.g. CURSO CSS INTERMEDIO - Dorian Desings" />
+			</label>
+		</fieldset>
+
+		<fieldset>
+			<label for="link-to-save" class="form-app__label"> Paste the link: </label>
+			<input name="link" type="text" id="link-to-save" class="form-app__input" placeholder="e.g. https://www.youtube.com/watch?v=DFEYiNWKZd0" />
+		</fieldset>
+
+		<button type="submit" class="button">Save</button>
+	</form>
+	<p id="error-message" class="error-message">Please insert a valid link</p>
+	<article class="links">
+		<header class="links__header">
+			<h2>Saved content</h2>
+			<button id="clear-all" class="links__clear-all button">Clear all</button>
+		</header>
+		<ul id="list-of-links" class="list-of-links"></ul>
+	</article>
+	<footer class="main-footer">
+		<p>Created by <span class="author"> rr69sport </span></p>
+		<p><a class="author" href=" https://github.com/rr69sport/link-saver" target="_blank" rel="noreferrer"> Repository </a></p>
+	</footer>
+</body>
+
+</html>
