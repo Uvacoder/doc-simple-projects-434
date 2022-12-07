@@ -1,0 +1,52 @@
+@use "vars"as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+fieldset {
+  margin: 0 0 $unit-gap;
+  padding: 0;
+  border: none;
+}
+
+label,
+input,
+button {
+  display: block;
+}
+
+input,
+button {
+  color: inherit;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba($light-color, 0.45);
+}
