@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="The Stoic homepage, featuring famous quotes from Stoics.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stoic homepage</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400|Playfair+Display:400,400i" rel="stylesheet">
+</head>
+<body>
+  <section class="quote-container">
+    <div class="container quote">
+      <q class="quote-content"></q>
+      <div class="quote-details"></div>
+    </div>
+  </section>
+  <footer class="container">
+    <div class="footer-row" style="margin-bottom: 1rem;">
+      <div>
+        <img id="refresh" src="./refresh_dark.svg"/>
+      </div>
+      <div>
+        <a href="about.html">More...</a>
+      </div>
+    </div>
+  </footer>
+  <script src="quotes.js"></script>
+  <script src="customize.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const quoteContainer = document.querySelector('.quote');
+    const content = document.querySelector('.quote-content');
+    const details = document.querySelector('.quote-details');
+    const footer = document.querySelector('footer');
+    const refresh = document.querySelector('#refresh');
+
+    quoteContainer.classList.add('show');
+    setTimeout(() => {
+      quoteContainer.classList.remove('show');
+      quoteContainer.style.opacity = 1;
+    }, 1000);
+
+    if (localStorage.getItem('lifespan') === 'long' 
+      && localStorage.getItem('quote')
+      && localStorage.getItem('date') === new Date().toDateString()) {
+      insertQuote(JSON.parse(localStorage.getItem('quote')));
+    } else if (localStorage.getItem('lifespan') === 'long') {
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      insertQuote(quotes[randomNumber]);
+      localStorage.setItem('quote', JSON.stringify(quotes[randomNumber]));
+      localStorage.setItem('date', new Date().toDateString());
+    } else {
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      insertQuote(quotes[randomNumber]);
+    }
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, quoteContainer, footer]);
+      refresh.src = "./refresh_light.svg"
+    }
+
+    refresh.addEventListener('click', refreshQuote);
+
+    function refreshQuote() {
+      refresh.removeEventListener('click', refreshQuote);
+      quoteContainer.classList.add('hide-show');
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      setTimeout(insertQuote, 500, quotes[randomNumber]);
+      if (localStorage.getItem('lifespan') === 'long') {
+        localStorage.setItem('quote', JSON.stringify(quotes[randomNumber]));
+        localStorage.setItem('date', new Date().toDateString());
+      }
+    }
+
+    function insertQuote(quote) {
+      if (quote.content.length > 200 && quote.content.length < 250) {
+        content.classList.remove('long');
+        content.classList.add('medium');
+      } else if (quote.content.length >= 250) {
+        content.classList.remove('medium');
+        content.classList.add('long');
+      } else {
+        content.classList.remove('medium');
+        content.classList.remove('long');
+      }
+
+      content.innerHTML = quote.content;
+      details.innerHTML = `<em> ${quote.reference} </em> &#8212; ${quote.author}`;
+      setTimeout(() => {
+        quoteContainer.classList.remove('hide-show');
+        refresh.addEventListener('click', refreshQuote);
+      }, 500);
+    }
+  </script>
+  <script src="fathom.js"></script>
+</body>
+</html>
