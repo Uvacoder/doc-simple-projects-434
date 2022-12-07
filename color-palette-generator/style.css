@@ -1,0 +1,150 @@
+:root {
+  --primary: #ebebf3;
+  --black: #000;
+  --violet: #7e6cca;
+  --white: #fff;
+  --pink: #f370bc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--primary);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  outline: none !important;
+  border: none !important;
+  background-color: var(--violet);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.title {
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.color {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.color-palette {
+  width: 150px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  background-color: var(--white);
+  transition: all 0.3s;
+}
+
+.color-palette:hover {
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.color-palette-img {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.color-palette-code {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.btn-container {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.btn-container > h6 {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.btn-container > h6 > span {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--violet);
+}
+
+#dummy_id {
+  z-index: -1000;
+}
+
+.toast {
+  background-color: var(--black);
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  border-radius: 50rem;
+  color: var(--white);
+  font-weight: 300;
+  position: relative;
+}
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast-color {
+  font-weight: bold;
+}
+
+.key-info {
+  background-color: var(--white);
+  padding: 0.7rem 2rem;
+  border-radius: 50rem;
+  margin: 1.5rem 0;
+  
+}
+
+.key-info > h5{
+  font-weight: 400;
+}
+
+h5 > span {
+  color: var(--violet) !important;
+  font-weight: bold !important;
+  font-size: 0.9rem;
+}
+
+@media Screen and (min-width: 480px) {
+  body {
+    justify-content: center;
+  }
+}
