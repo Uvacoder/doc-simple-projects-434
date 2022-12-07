@@ -1,0 +1,119 @@
+/* 
+ * Reset default. 
+ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 
+ * Set body and default styling. 
+ */
+body {
+  background-color: #345f51;
+  color: #c89dab;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Grenze", serif;
+  line-height: 1em;
+}
+
+::selection{
+  background-color: #eee1e5;
+  color: #345f51;
+}
+
+
+/*
+ * Style the main page header.
+ */
+header#header {
+  margin: 5em 10em 7em 10em;
+}
+
+header#header h1 {
+  font-size: 4.5em;
+  font-weight: 400;
+}
+
+header#header h1 span {
+  font-style: italic;
+}
+
+
+/*
+ * Style the main content (create css grid).
+ */
+main section.room {
+  margin: 0 5em;
+  display: grid;
+  grid-template-columns: minmax(290px, 19%) minmax(290px, 19%) minmax(290px, 19%) minmax(290px, 19%) minmax(290px, 19%);
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2em;
+  border-bottom: 1px dotted #c89dab;
+  padding-bottom: 3.5em;
+  margin-bottom: 6em;
+}
+
+main section.room:first-child {
+  border-top: 1px dotted #c89dab;
+  padding-top: 6em;
+}
+
+main h2 {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+
+/*
+ * Style the plant components.
+ */
+main article {
+  border-top: 3px solid #c89dab;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+main article header h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+main article section, main article footer{
+  font-family: "Roboto Mono", monospace;
+  padding-top: 1em;
+  /*border-bottom: 1px dotted #c89dab;*/
+  padding-bottom: 1em;
+}
+
+main article section ul {
+  list-style-type: none;
+}
+
+main article section ul li span {
+  font-weight: 500;
+}
+
+
+/*
+ * Style the plants that need watering.
+ */
+main article.needs_watering {
+  background-color: #c89dab;
+  color: #345f51;
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+main article.needs_watering ::selection{
+  background-color: #80b8a5;
+  color: #81495b;
+}
+
+main article.needs_watering section, main article.needs_watering footer {
+  border-bottom: 1px dotted #345f51;
+}
