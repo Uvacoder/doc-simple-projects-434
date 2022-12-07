@@ -1,0 +1,53 @@
+body{
+    background-color: #218c74;
+    font-family: handlee;
+}
+h1{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: .05em;
+    text-shadow: 0.1px 0.1px 2px #34495e;
+}
+button{
+    display: block;
+    width: 10em;
+    height: 4em;
+    cursor: pointer;
+    margin: 10% auto 2em auto;
+    border: 1px solid #fff;
+    outline:none;
+    border-radius: 0.63em;
+    background-color: #218c74;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.65em;
+    letter-spacing: 1.5px;
+    box-shadow: 0.2em 0.2em 0px #fff;
+}
+#quote-holder{
+    width: 100%;
+    height: auto;
+    font-family: handlee;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+#quote-holder::before{
+    content: '"';
+    font-size: 1.8em;
+    color: #333;
+}
+#quote-holder::after{
+    content: '"';
+    font-size: 1.8em;
+    color: #333;
+}
+#owner{
+    direction: rtl;
+    color: #333;
+    font-size: 2em;
+    padding: 1em 5.5em 0em 0em;
+    font-family: monospace;
+}
