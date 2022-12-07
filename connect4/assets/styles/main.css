@@ -1,0 +1,220 @@
+
+
+/* HEADER FONT STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,500;1,500&display=swap');
+
+/* BODY TEXT FONT STYLE*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+
+/* * {
+    border: 1px solid salmon;
+} */
+
+
+body {
+    width: 80%;
+    min-width: 1100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 0;
+    background-color: rgb( 250, 250, 250 );
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    color: rgb( 51, 51, 51 )
+}
+
+
+
+/* TEXT STYLES  */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1 {
+    margin: 16px 0;
+    text-align: center;
+}
+
+
+
+/* BUTTON STYLES */
+
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: rgb( 40, 59, 84 );
+    font-weight: 600;
+    color: rgb( 255, 255, 255 );
+    border: 2px solid rgb( 40, 59, 84 );
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgba( 40, 59, 84, .8 );
+    border: 2px solid rgba( 40, 59, 84, .2 );
+}
+
+button.clear-board {
+    margin-right: 16px;
+}
+
+
+
+/* DIRECTION STYLES */
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px auto 16px;
+}
+
+.directions {
+    width: 80%;
+    padding: 16px 24px;
+    background-color: rgba( 77, 124, 168, .2 );
+    border: 2px solid rgba( 77, 124, 168, 1 );
+    border-radius: 4px;
+    color:rgb( 0, 0, 0 );
+}
+
+.directions ol {
+    padding-left: 24px;
+}
+
+.directions li {
+    margin: 0 0 4px 0;
+    padding-left: 8px;
+}
+
+
+/* GAME HEADER STYLES */
+
+.game-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 40px auto 24px;
+}
+
+.turns, .score-board, .game-options {
+    width: 32%;
+}
+
+.turns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    background-color: rgb( 51, 51, 51 );
+    border-radius: 100px;
+}
+
+.score-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player1, .player2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb( 0, 0, 0 );
+    border: 2px solid rgb( 34, 34, 34 );
+    border-radius: 4px;
+    width: 40%
+}
+
+.player1 h3, .player2 h3 {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 0;
+    text-align: center;
+}
+
+.player1 h3 {
+    background-color: rgba( 230, 80, 80, .8 );
+}
+
+.player2 h3 {
+    background-color: rgba( 250, 186, 68, .8 );
+}
+
+.score {
+    margin: 4px auto;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.game-options {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* GAME BOARD STYLES  */
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 800px;
+    margin: 24px auto 40px;
+    padding: 16px;
+    background-color: rgb( 77, 124, 168 );
+    border-radius: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.col:hover {
+    cursor: pointer;
+    background-color: rgba( 40, 59, 84, 0.5 );
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb( 250, 250, 250 );
+    border-radius: 100px;
+}
+
+
+
+/* CHECKER STYLES */
+
+.red {
+    background-color: rgb( 230, 80, 80 );
+    box-shadow: inset 0 -1px 6px 1px rgb( 34, 34, 34 );
+    -moz-box-shadow: inset 0 -1px 6px 1px rgb( 34, 34, 34 );
+    -webkit-box-shadow: inset 0 -1px 6px 1px rgb( 34, 34, 34 );
+}
+
+.yellow {
+    background-color: rgb( 250, 186, 68 );
+    box-shadow: inset 0 -1px 6px 1px rgb( 0, 0, 0 );
+    -moz-box-shadow: inset 0 -1px 6px 1px rgb( 0, 0, 0 );
+    -webkit-box-shadow: inset 0 -1px 6px 1px rgb( 0, 0, 0 );
+}
