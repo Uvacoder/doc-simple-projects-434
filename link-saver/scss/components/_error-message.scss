@@ -1,0 +1,20 @@
+@use "../config/vars"as *;
+@use "../config/placeholders"as *;
+
+.error-message {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $unit-gap;
+
+  background-color: $danger-color;
+  text-align: center;
+  font-size: 1.2rem;
+
+  @extend %border-radius;
+  transform: scale(0);
+}
+
+.error-message--show {
+  transform: scale(1);
+}

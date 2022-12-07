@@ -1,0 +1,50 @@
+@use "../config/vars"as *;
+@use "../config/placeholders"as *;
+
+.list-of-links {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+
+  @extend %bordered;
+  @extend %colorized;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: $unit-gap;
+    align-items: center;
+
+    padding: $unit-gap;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid $light-color-with-alpha;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $unit-gap / 2;
+    @extend %bordered;
+  }
+
+  &__link:hover {
+    background-color: $light-color-with-alpha;
+  }
+
+  &__delete {
+    text-align: center;
+
+    &:hover {
+      color: $light-color;
+      background-color: $danger-color;
+      border-color: $danger-color;
+    }
+  }
+
+  &__saved-at {
+    text-align: right;
+    font-size: 75%;
+    grid-column: 1 / -1;
+  }
+}

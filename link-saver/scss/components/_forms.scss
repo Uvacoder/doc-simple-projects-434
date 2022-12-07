@@ -1,0 +1,50 @@
+@use "../config/vars"as *;
+@use "../config/placeholders"as *;
+
+.form-app {
+  margin: $unit-gap auto;
+  padding: $unit-gap;
+  width: 100%;
+  max-width: $max-width;
+  color: $dark-color;
+  @extend %colorized !optional;
+  @extend %bordered !optional;
+
+  &__label {
+    color: $main-color;
+  }
+
+  &__input {
+    padding: $unit-gap / 2;
+    background-color: $light-color-with-alpha;
+    font-size: 100%;
+    @extend %border-radius !optional;
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: $unit-gap;
+    margin-bottom: $unit-gap;
+    color: $light-color;
+    @extend %border !optional;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &__input:hover {
+    border-color: rgba($main-color, 0.75);
+  }
+
+  &__input:focus {
+    border-color: $main-color;
+  }
+
+  &__input:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $danger-color;
+    }
+  }
+}
