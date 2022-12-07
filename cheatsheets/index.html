@@ -1,0 +1,1311 @@
+<html lang="en"><head>
+        <!-- <base href="/css-cheat-sheet/"> -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+
+        <title>CSS Cheat Sheet</title>
+        <meta name="description" content="CSS Cheat Sheet - A reference for CSS goodness.">
+
+        <link rel="stylesheet" href="https://uvacoder.github.io/test-css/css/style.css?2.0.1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/manifest.json">
+        <link rel="mask-icon" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/safari-pinned-tab.svg" color="#00374e">
+        <link rel="shortcut icon" href="https://adam-marsden.co.uk/css-cheat-sheet/img/favicons/favicon.ico">
+        <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta property="og:url" content="https://adam-marsden.co.uk/css-cheat-sheet">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="CSS Cheat Sheet">
+        <meta property="og:image" content="https://adam-marsden.co.uk/css-cheat-sheet/img/social.jpg">
+        <meta property="og:description" content="CSS Cheat Sheet - A reference for CSS goodness.">
+        <meta property="og:site_name" content="CSS Cheat Sheet">
+        <meta property="og:locale" content="en_GB">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@AdamMarsdenUK">
+        <meta name="twitter:creator" content="@AdamMarsdenUK">
+        <meta name="twitter:url" content="https://adam-marsden.co.uk/css-cheat-sheet">
+        <meta name="twitter:title" content="CSS Cheat Sheet">
+        <meta name="twitter:description" content="CSS Cheat Sheet - A reference for CSS goodness.">
+        <meta name="twitter:image" content="https://adam-marsden.co.uk/css-cheat-sheet/img/social.jpg">
+
+        <meta itemprop="name" content="CSS Cheat Sheet">
+        <meta itemprop="description" content="CSS Cheat Sheet - A reference for CSS goodness.">
+        <meta itemprop="image" content="https://adam-marsden.co.uk/css-cheat-sheet/img/social.jpg">
+
+        <meta name="robots" content="index,follow,noodp">
+        <meta name="googlebot" content="index,follow">
+
+        <meta name="format-detection" content="telephone=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="bgBlob bgBlob--1"></div>
+        <div class="bgBlob bgBlob--2"></div>
+        <div class="svgcompile"><svg xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 14 11.9" id="github"><title>github</title> <g> <g> <path d="M9.4,6.9c0.3,0,0.5,0.1,0.7,0.4c0.2,0.3,0.3,0.6,0.3,1c0,0.4-0.1,0.7-0.3,1C9.9,9.5,9.7,9.6,9.4,9.6
+            c-0.3,0-0.5-0.1-0.7-0.4C8.5,9,8.4,8.7,8.4,8.3c0-0.4,0.1-0.7,0.3-1C8.9,7,9.2,6.9,9.4,6.9 M12.9,3.3c0.7,0.8,1.1,1.8,1.1,3
+            c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.4,1.1-0.7,1.5c-0.3,0.4-0.6,0.7-1,1c-0.4,0.3-0.7,0.5-1.1,0.6c-0.3,0.1-0.7,0.2-1.1,0.3
+            c-0.4,0.1-0.7,0.1-0.9,0.1c-0.2,0-0.4,0-0.7,0c-0.1,0-0.2,0-0.5,0c-0.3,0-0.6,0-0.8,0s-0.5,0-0.8,0c-0.3,0-0.5,0-0.5,0
+            c-0.2,0-0.5,0-0.7,0c-0.2,0-0.5-0.1-0.9-0.1c-0.4-0.1-0.8-0.2-1.1-0.3c-0.3-0.1-0.7-0.3-1.1-0.6c-0.4-0.3-0.7-0.6-1-1
+            C0.7,9.4,0.4,8.9,0.3,8.3C0.1,7.7,0,7,0,6.3c0-1.2,0.4-2.1,1.1-3C1,3.3,1,2.9,1.1,2.1C1.2,1.4,1.3,0.7,1.6,0
+            c0.9,0.1,2.1,0.6,3.5,1.6C5.5,1.5,6.2,1.4,7,1.4c0.9,0,1.5,0.1,1.9,0.2c0.6-0.4,1.2-0.8,1.8-1c0.6-0.3,1-0.4,1.3-0.5L12.4,0
+            c0.3,0.6,0.4,1.4,0.5,2.1C13,2.9,13,3.3,12.9,3.3 M7,11.2c1.7,0,3-0.2,3.8-0.6c0.9-0.4,1.3-1.2,1.3-2.5c0-0.7-0.3-1.3-0.8-1.8
+            c-0.3-0.3-0.6-0.4-1-0.5c-0.4-0.1-0.9-0.1-1.7,0C7.8,5.8,7.3,5.8,7,5.8c-0.4,0-0.8,0-1.3-0.1c-0.5,0-0.9-0.1-1.2-0.1
+            c-0.3,0-0.6,0-1,0.1C3.2,5.9,2.9,6,2.7,6.2C2.2,6.7,1.9,7.3,1.9,8.1c0,1.3,0.4,2.1,1.3,2.5C4,11,5.3,11.2,7,11.2L7,11.2 M4.6,6.9
+            c0.3,0,0.5,0.1,0.7,0.4c0.2,0.3,0.3,0.6,0.3,1c0,0.4-0.1,0.7-0.3,1C5.1,9.5,4.9,9.6,4.6,9.6c-0.3,0-0.5-0.1-0.7-0.4
+            C3.7,9,3.6,8.7,3.6,8.3c0-0.4,0.1-0.7,0.3-1C4.1,7,4.3,6.9,4.6,6.9"></path> </g> </g> </symbol></svg></div>
+
+        <header class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="sidebar__title">CSSCS</h5>
+                </div>
+                <div class="col">
+                    <div class="icon">
+                      <div class="top"></div>
+                      <div class="mid"></div>
+                      <div class="bot"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="sidebar">
+            <h5 class="sidebar__title">CSSCS</h5>
+
+            <nav class="sidebar__nav">
+                <ul>
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#pseudo-selectors">Pseudo</a></li>
+                    <li><a href="#text-styling">Text Styling</a></li>
+                    <li><a href="#position">Position</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#box-properties">Box properties</a></li>
+                    <li><a href="#list-styling">List Styling</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#css-grid">CSS Grid</a></li>
+                    <li><a href="#dynamic-content">Dynamic Content</a></li>
+                </ul>
+            </nav>
+
+            <div class="social">
+                <a target="_blank" href="https://github.com/uvacoder/test-css"><svg viewBox="0 0 14 11.9"><use xlink:href="#github"></use></svg> Contribute</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="content__title">CSS Cheat Sheet</h1>
+            <h3 class="content__subTitle">A reference for CSS goodness.</h3>
+
+            
+
+            <section class="container section" id="selectors">
+                <h3 class="section__title">Selectors</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Universal Selector</p>
+                                <code class="col-xs-12 col-sm">* {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">ID Selector</p>
+                                <code class="col-xs-12 col-sm">#id {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Class Selector</p>
+                                <code class="col-xs-12 col-sm">.class {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Type Selector</p>
+                                <code class="col-xs-12 col-sm">h1, h2 ,h3 {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12 col-xl">Adjacent Sibling Selector</p>
+                                <code class="col-xs-12 col-sm-12 col-xl">h1 + p {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Child Selector</p>
+                                <code class="col-xs-12 col-sm">ul &gt; li {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">General Sibling Selector</p>
+                                <code class="col-xs-12 col-sm">h1 ~ p {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Descendant Selector</p>
+                                <code class="col-xs-12 col-sm">p a {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Attribute Selector</p>
+                                <code class="col-xs-12 col-sm-12">div[attribute="SomeValue"] {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="pseudo-selectors">
+                <h3 class="section__title">Pseudo Selectors &amp; Elements</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Mouse Over Selector</p>
+                                <code class="col-xs-12 col-sm">a:hover {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Active Link Selector</p>
+                                <code class="col-xs-12 col-sm">a:active {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Focus Selector</p>
+                                <code class="col-xs-12 col-sm">input:focus {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Visited Links Selector</p>
+                                <code class="col-xs-12 col-sm">a:visited {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:visited">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12 col-xl">Link Selector</p>
+                                <code class="col-xs-12 col-sm-12 col-xl">.class:link {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:link">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Checked elements selector</p>
+                                <code class="col-xs-12 col-sm">input:checked {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Disabled elements selector</p>
+                                <code class="col-xs-12 col-sm">input:disabled {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Enabled elements selector</p>
+                                <code class="col-xs-12 col-sm">input:enabled {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Not a Specified Element Selector</p>
+                                <code class="col-xs-12 col-sm">:not(p) {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:not">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">First Line Selector</p>
+                                <code class="col-xs-12 col-sm">p::first-line {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">First Letter Selector</p>
+                                <code class="col-xs-12 col-sm">p::first-letter {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">First Child Selector</p>
+                                <code class="col-xs-12 col-sm">p:first-child {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Last Child Selector</p>
+                                <code class="col-xs-12 col-sm">p:last-child {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Only Child Selector </p>
+                                <code class="col-xs-12 col-sm">p:only-child {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">:nth-child Selector</p>
+                                <code class="col-xs-12 col-sm">p:nth-child() {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">First Element of its Parent Selector</p>
+                                <code class="col-xs-12 col-sm">p:first-of-type {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Elements that have no Children Selector</p>
+                                <code class="col-xs-12 col-sm-12">p:empty {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:empty">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Before Element</p>
+                                <code class="col-xs-12 col-sm-12">.class::before {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">After Element</p>
+                                <code class="col-xs-12 col-sm-12">.class::after {}</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="text-styling">
+                <h3 class="section__title">Text Styling</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Font style</p>
+                                <code class="col-xs-12 col-sm-12">font-style: normal | italic | oblique</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Font Variant</p>
+                                <code class="col-xs-12 col-sm-12">font-variant: normal | small-caps</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Font Weight</p>
+                                <code class="col-xs-12 col-sm-12">font-weight: normal | bold | bolder | lighter | 100 - 900</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Vertical Alignment</p>
+                                <code class="col-xs-12 col-sm-12">vertical-align: baseline | 10px | sub | super | top | text-top | middle | bottom | text-bottom | initial</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Transform</p>
+                                <code class="col-xs-12 col-sm-12">text-transform: capitalise | lowercase | uppercase</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Font Size</p>
+                                <code class="col-xs-12 col-sm-12">font-size: 12px | 0.8em | 80%</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Space Between Characters</p>
+                                <code class="col-xs-12 col-sm-12">letter-spacing: normal | 4px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Line Height</p>
+                                <code class="col-xs-12 col-sm-12">line-height: normal | 3em | 34%</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Horizontal Alignment</p>
+                                <code class="col-xs-12 col-sm-12">text-align: left | right | center | justify</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Align Last</p>
+                                <code class="col-xs-12 col-sm-12">text-align-last: auto | left | right | center | justify | start | end | initial | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Decoration</p>
+                                <code class="col-xs-12 col-sm-12">text-decoration: none | underline | overline | line-through</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Indent First Line</p>
+                                <code class="col-xs-12 col-sm">text-indent: 25px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Font Family</p>
+                                <code class="col-xs-12 col-sm-12">font-family: 'Open Sans', sans-serif</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Justify</p>
+                                <code class="col-xs-12 col-sm-12">text-justify: auto | inter-word | inter-character | none | initial | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-justify">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Overflow</p>
+                                <code class="col-xs-12 col-sm-12">text-overflow: clip | ellipsis | string | initial | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Text Shadow</p>
+                                <code class="col-xs-12 col-sm-12">text-shadow: h-shadow v-shadow blur-radius color | none | initial | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="position">
+                <h3 class="section__title">Position</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Position</p>
+                                <code class="col-xs-12 col-sm-12">position: static | relative | absolute | fixed | sticky</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Position Properties</p>
+                                <code class="col-xs-12 col-sm-12">top | right | bottom | left</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Float Element</p>
+                                <code class="col-xs-12 col-sm-12">float: left | right | none</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Clear Floating Elements</p>
+                                <code class="col-xs-12 col-sm-12">clear: none | left | right | both</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Z Index</p>
+                                <code class="col-xs-12 col-sm-12">z-index: 3 | auto | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="background">
+                <h3 class="section__title">Background</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Background Image</p>
+                                <code class="col-xs-12 col-sm-12">background-image: url()</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Background Repeat</p>
+                                <code class="col-xs-12 col-sm-12">background-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Background Attachment</p>
+                                <code class="col-xs-12 col-sm-12">background-attachment: scroll | fixed | local | initial | inherit</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Background Color</p>
+                                <code class="col-xs-12 col-sm-12">background-color: #2AA9E0</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Background Position</p>
+                                <code class="col-xs-12 col-sm-12">background-position: top | right | bottom | left | center</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="box-properties">
+                <h3 class="section__title">Box Properties</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Box Sizing</p>
+                                <code class="col-xs-12 col-sm-12">box-sizing: border-box | content-box</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Margin</p>
+                                <code class="col-xs-12 col-sm-12">margin: 2px 4px 6px 8px | 0 auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Padding</p>
+                                <code class="col-xs-12 col-sm-12">padding: 2px 4px 6px 8px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Border Color</p>
+                                <code class="col-xs-12 col-sm-12">border-color: #2AA9E0</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Border Style</p>
+                                <code class="col-xs-12 col-sm-12">border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Border Width</p>
+                                <code class="col-xs-12 col-sm-12">border-width: 10px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="list-styling">
+                <h3 class="section__title">List Styling</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">List Type</p>
+                                <code class="col-xs-12 col-sm-12">list-style-type: disc | circle | square | none</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">List Position</p>
+                                <code class="col-xs-12 col-sm-12">list-style-position: inside | outside</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">List Image</p>
+                                <code class="col-xs-12 col-sm-12">list-style-image: url()</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="flexbox">
+                <h3 class="section__title">Flexbox</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Flex Direction</p>
+                                <code class="col-xs-12 col-sm-12">flex-direction: row | row-reverse | column | column-reverse</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Flex Wrap</p>
+                                <code class="col-xs-12 col-sm-12">flex-wrap: nowrap | wrap | wrap-reverse</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Justify Content</p>
+                                <code class="col-xs-12 col-sm-12">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Items</p>
+                                <code class="col-xs-12 col-sm-12">align-items: flex-start | flex-end | center | baseline | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Content</p>
+                                <code class="col-xs-12 col-sm-12">align-content: flex-start | flex-end | center | space-between | space-around | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Order</p>
+                                <code class="col-xs-12 col-sm">order: 0</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/order">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Flex Grow</p>
+                                <code class="col-xs-12 col-sm">flex-grow: 0</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm">Flex Shrink</p>
+                                <code class="col-xs-12 col-sm">flex-shrink: 1</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Flex Basis</p>
+                                <code class="col-xs-12 col-sm-12">flex-basis: 3px | auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Self</p>
+                                <code class="col-xs-12 col-sm-12">align-self: auto | flex-start | flex-end | center | baseline | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="css-grid">
+                <h3 class="section__title">CSS Grid</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Template Columns</p>
+                                <code class="col-xs-12 col-sm-12">grid-template-columns: 40px 50px auto 50px 40px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Template Rows</p>
+                                <code class="col-xs-12 col-sm-12">grid-template-rows: 25% 100px auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Template Areas</p>
+                                <code class="col-xs-12 col-sm-12">grid-template-areas: "a b c" | none</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Template</p>
+                                <code class="col-xs-12 col-sm-12">grid-template: "a a a" 20%
+                           "b b b" auto | 100px 1fr / 50px 1fr</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Column Gap</p>
+                                <code class="col-xs-12 col-sm-12">grid-column-gap: 10px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Row Gap</p>
+                                <code class="col-xs-12 col-sm-12">grid-row-gap: 10px</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Justify Items</p>
+                                <code class="col-xs-12 col-sm-12">justify-items: start | end | center | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Items</p>
+                                <code class="col-xs-12 col-sm-12">align-items: start | end | center | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Justify Content</p>
+                                <code class="col-xs-12 col-sm-12">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Content</p>
+                                <code class="col-xs-12 col-sm-12">align-content: flex-start | flex-end | center | space-between | space-around | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Auto Columns</p>
+                                <code class="col-xs-12 col-sm-12">grid-auto-columns: 100px | max-content | min-content</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Auto Rows</p>
+                                <code class="col-xs-12 col-sm-12">grid-auto-rows: 100px | max-content | min-content</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Auto Flow</p>
+                                <code class="col-xs-12 col-sm-12">grid-auto-flow: row | column | row dense | column dense</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Column Start</p>
+                                <code class="col-xs-12 col-sm-12">grid-column-start: 2 | areaname | span 2 | span areaname | auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Column End</p>
+                                <code class="col-xs-12 col-sm-12">grid-column-end: 2 | areaname | span 2 | span areaname | auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Row Start</p>
+                                <code class="col-xs-12 col-sm-12">grid-row-start: 2 | areaname | span 2 | span areaname | auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Row End</p>
+                                <code class="col-xs-12 col-sm-12">grid-row-end: 2 | areaname | span 2 | span areaname | auto</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Column</p>
+                                <code class="col-xs-12 col-sm-12">grid-column: 3 / span 2</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Grid Row</p>
+                                <code class="col-xs-12 col-sm-12">grid-row: 3 / span 2</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Justify Self</p>
+                                <code class="col-xs-12 col-sm-12">justify-self: start | end | center | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Align Self</p>
+                                <code class="col-xs-12 col-sm-12">align-self: start | end | center | stretch</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container section" id="dynamic-content">
+                <h3 class="section__title">Dynamic Content</h3>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">CSS Variable</p>
+                                <code class="col-xs-12 col-sm-12">--variable-name: value</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Variable Usage</p>
+                                <code class="col-xs-12 col-sm-12">var(--variable-name)</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Counter Reset</p>
+                                <code class="col-xs-12 col-sm-12">counter-reset: name-of-counter</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Counter Increment</p>
+                                <code class="col-xs-12 col-sm-12">counter-increment: name-of-counter</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Counter Dynamic Value</p>
+                                <code class="col-xs-12 col-sm-12">content: counter(name-of-counter)</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="css-cheats">
+                            <div class="row justify-content-between align-items-center">
+                                <p class="col-xs-12 col-sm-12">Attribute Dynamic Value</p>
+                                <code class="col-xs-12 col-sm-12">content: attr(name-of-attribute)</code>
+                            </div>
+                        </div>
+                        <div class="css-cheats__learn">
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>Built &amp; Maintained by <a target="_blank" href="https://github.com/uvacoder/">uvacoder</a></p>
+            </footer>
+
+        </div>
+
+</body></html>
