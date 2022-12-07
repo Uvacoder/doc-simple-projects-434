@@ -1,0 +1,42 @@
+nav{
+    margin-bottom: 50px;
+}
+
+.avatar{
+    width: fit-content;
+}
+.label-danger {
+    background-color: #d9534f;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.label-default {
+    background-color: #777;
+}
+.label-primary {
+    background-color: #337ab7;
+}
+.label-success {
+    background-color: #5cb85c;
+}
+.label-info {
+    background-color: #5bc0de;
+}
+.btn{
+    width: 100%;
+}
+.close-btn{
+    border-radius: 10%;
+    width: fit-content;
+    font: 400 13.3333px Arial;
+}
