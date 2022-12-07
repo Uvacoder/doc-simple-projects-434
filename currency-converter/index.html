@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--Code By Webdevtrick ( https://webdevtrick.com )-->
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Currency Converter | Webdevtrick.com</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+  <link rel="stylesheet" href="style.css">
+ <style>
+ @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+ box-sizing: border-box;
+}
+/*body {
+ font-family: 'Muli', sans-serif;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+}*/
+
+.container {
+    max-width: 800px;
+    display: block;
+    width: 100%;
+margin:0 auto;
+}
+.currency {
+    width: 40%;
+    float: left;
+display: block !important;
+position: relative;
+}
+.flag-img {
+    position: absolute;
+    right: 20px;
+    height: 40px;
+    top: 25px;
+
+}
+.flag-img img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover; /*I didn't knew about this*/
+}
+.middle {
+    width: 150px;
+    float: left;
+}
+div#rate {
+    display: none;
+}
+.currency {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.currency select {
+ background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .2em top 50%, 0 0;
+    background-size: .50em auto, 100%;
+ border: 0;
+ padding-right: 20px;
+ font-size: 22px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.currency input {
+ border: 0;
+ background: transparent;
+ font-size: 22px;
+ text-align: left;
+ width: 100%;
+    border-bottom: 1px solid gainsboro;
+    padding: 6px 0 10px 0;
+}
+.middle {
+ color: #f59300;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ position: relative;
+    top: 25px;
+}
+.middle button {
+ background-color: #fff;
+ border: 2px solid #ecf0f1;
+ border-radius: 50%;
+ cursor: pointer;
+ color: #f59300;
+ font-size: 18px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 30px;
+ width: 30px;
+ transform: rotate(0deg);
+ margin: 0 auto;
+}
+.currency span {
+    font-size: 10px;
+}
+select#from_currency, select#to_currency {
+    width: 100%;
+    font-size: 15px;
+    border-bottom: 1px solid gainsboro;
+    padding: 9px 0;
+    margin-bottom: 10px;
+}
+.middle button:active {
+ transform: rotate(0deg) scale(0.9);
+}
+.middle .rate {
+ background-color: #fff;
+ border: 2px solid #ecf0f1;
+ border-radius: 50px;
+ font-size: 18px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 30px;
+ padding: 0 10px;
+ margin: 30px 15px 30px 25px;
+}
+select:focus, input:focus, button:focus {
+ outline: 0;
+}
+ 
+ 
+ </style>
+</head>
+<body onload="calculate()">
+ 
+<div class="container">
+ <div class="currency">
+ <span>From</span>
+ <div class="flag-img">
+    <img id="img1" src="" alt="flag1">
+ </div>
+ 
+ <select id="from_currency">
+ <option value="AED">AED</option>
+ <option value="ARS">ARS</option>
+ <option value="AUD">AUD</option>
+ <option value="BGN">BGN</option>
+ <option value="BRL">BRL</option>
+ <option value="BSD">BSD</option>
+ <option value="CAD">CAD</option>
+ <option value="CHF">CHF</option>
+ <option value="CLP">CLP</option>
+ <option value="CNY">CNY</option>
+ <option value="COP">COP</option>
+ <option value="CZK">CZK</option>
+ <option value="DKK">DKK</option>
+ <option value="DOP">DOP</option>
+ <option value="EGP">EGP</option>
+ <option value="EUR">EUR</option>
+ <option value="FJD">FJD</option>
+ <option value="GBP">GBP</option>
+ <option value="GTQ">GTQ</option>
+ <option value="HKD">HKD</option>
+ <option value="HRK">HRK</option>
+ <option value="HUF">HUF</option>
+ <option value="IDR">IDR</option>
+ <option value="ILS">ILS</option>
+ <option value="INR">INR</option>
+ <option value="ISK">ISK</option>
+ <option value="JPY">JPY</option>
+ <option value="KRW">KRW</option>
+ <option value="KZT">KZT</option>
+ <option value="MXN">MXN</option>
+ <option value="MYR">MYR</option>
+ <option value="NOK">NOK</option>
+ <option value="NZD">NZD</option>
+ <option value="PAB">PAB</option>
+ <option value="PEN">PEN</option>
+ <option value="PHP">PHP</option>
+ <option value="PKR">PKR</option>
+ <option value="PLN">PLN</option>
+ <option value="PYG">PYG</option>
+ <option value="RON">RON</option>
+ <option value="RUB">RUB</option>
+ <option value="SAR">SAR</option>
+ <option value="SEK">SEK</option>
+ <option value="SGD">SGD</option>
+ <option value="THB">THB</option>
+ <option value="TRY">TRY</option>
+ <option value="TWD">TWD</option>
+ <option value="UAH">UAH</option>
+ <option value="USD" selected>USD</option>
+ <option value="UYU">UYU</option>
+ <option value="VND">VND</option>
+ <option value="ZAR">ZAR</option>
+ </select>
+ <input type="number" id="from_ammount" placeholder="0" value=1 />
+ </div>
+ <div class="middle">
+ <button id="exchange">
+ <i class="fas fa-exchange-alt"></i>
+ </button>
+ <div class="rate" id="rate"></div>
+ </div>
+ <div class="currency">
+ <span>To</span>
+ <div class="flag-img">
+    <img id="img2" src="" alt="flag2">
+ </div>
+ 
+ <select id="to_currency">
+ <option value="AED">AED</option>
+ <option value="ARS">ARS</option>
+ <option value="AUD">AUD</option>
+ <option value="BGN">BGN</option>
+ <option value="BRL">BRL</option>
+ <option value="BSD">BSD</option>
+ <option value="CAD">CAD</option>
+ <option value="CHF">CHF</option>
+ <option value="CLP">CLP</option>
+ <option value="CNY">CNY</option>
+ <option value="COP">COP</option>
+ <option value="CZK">CZK</option>
+ <option value="DKK">DKK</option>
+ <option value="DOP">DOP</option>
+ <option value="EGP">EGP</option>
+ <option value="EUR">EUR</option>
+ <option value="FJD">FJD</option>
+ <option value="GBP">GBP</option>
+ <option value="GTQ">GTQ</option>
+ <option value="HKD">HKD</option>
+ <option value="HRK">HRK</option>
+ <option value="HUF">HUF</option>
+ <option value="IDR">IDR</option>
+ <option value="ILS">ILS</option>
+ <option value="INR" selected>INR</option>
+ <option value="ISK">ISK</option>
+ <option value="JPY">JPY</option>
+ <option value="KRW">KRW</option>
+ <option value="KZT">KZT</option>
+ <option value="MXN">MXN</option>
+ <option value="MYR">MYR</option>
+ <option value="NOK">NOK</option>
+ <option value="NZD">NZD</option>
+ <option value="PAB">PAB</option>
+ <option value="PEN">PEN</option>
+ <option value="PHP">PHP</option>
+ <option value="PKR">PKR</option>
+ <option value="PLN">PLN</option>
+ <option value="PYG">PYG</option>
+ <option value="RON">RON</option>
+ <option value="RUB">RUB</option>
+ <option value="SAR">SAR</option>
+ <option value="SEK">SEK</option>
+ <option value="SGD">SGD</option>
+ <option value="THB">THB</option>
+ <option value="TRY">TRY</option>
+ <option value="TWD">TWD</option>
+ <option value="UAH">UAH</option>
+ <option value="USD">USD</option>
+ <option value="UYU">UYU</option>
+ <option value="VND">VND</option>
+ <option value="ZAR">ZAR</option>
+ </select>
+ <input type="number" id="to_ammount" placeholder="0" />
+ </div>
+</div>
+<script src="currency.js"></script>
+</body>
+</html>
