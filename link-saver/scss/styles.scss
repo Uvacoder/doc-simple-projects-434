@@ -1,0 +1,13 @@
+@use "./config/reset";
+
+@use "./layout/body";
+@use "./layout/main-footer";
+
+@use "./components/titles";
+@use "./components/buttons";
+@use "./components/forms";
+@use "./components/links";
+@use "./components/list-of-links";
+@use "./components/error-message";
+
+@use "./helpers/helpers";
