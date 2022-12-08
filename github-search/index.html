@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitPub</title>
+    <script src="./dist/app.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css"
+    />
+  </head>
+  <body>
+    <h2
+      class="
+        pt-10
+        text-center
+        mt-6
+        text-3xl
+        leading-9
+        font-extrabold
+        text-gray-900
+      "
+    >
+      GitPub
+    </h2>
+    <h3 class="pt-9 text-center mt-5 leading-8 font-extrabold text-gray-900">
+      Search a Github User
+    </h3>
+
+    <form class="w-full max-w-sm mx-auto" action="#">
+      <div class="mt-10 flex">
+        <input
+          type="text"
+          class="
+            form-input
+            block
+            w-full
+            py-2
+            px-3
+            border border-gray-300
+            rounded-md
+            shadow-sm
+            focus:outline-none
+            focus:shadow-outline-blue
+            focus:border-blue-300
+            transition
+            duration-150
+          "
+          name="username"
+          id="gp-username"
+          required
+        />
+        <button
+          class="
+            ml-2
+            py-2
+            px-3
+            border border-gray-300
+            rounded-md
+            text-sm
+            leading-4
+            font-medium
+            text-gray-700
+            hover:text-gray-500
+            focus:outline-none
+            focus:border-blue-300
+            focus:shadow-outline-blue
+            active:bg-gray-50
+            active:text-gray-800
+            transition
+            duration-150
+            ease-in-out
+          "
+          type="submit"
+        >
+          Search User
+        </button>
+      </div>
+    </form>
+    <div id="container" class="mt-10"></div>
+  </body>
+</html>

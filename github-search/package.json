@@ -1,0 +1,26 @@
+{
+  "name": "GitPub",
+  "version": "1.0.0",
+  "description": "This project uses GitHub API which allow user to search and view github public user info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Febby/GitPub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Febby/GitPub/issues"
+  },
+  "homepage": "https://github.com/Febby/GitPub#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
+}
