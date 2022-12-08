@@ -1,0 +1,56 @@
+//Screen sizes
+$desktop: 1440px;
+$mobile: 375px;
+
+//colors
+
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(212, 45%, 89%);
+$grayishBlue: hsl(220, 15%, 55%);
+$darkBlue: hsl(218, 44%, 22%);
+
+//fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+$font: "Outfit", sans-serif;
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightGray;
+  font-family: $font;
+}
+
+.qr-container {
+  background: $white;
+  width: $mobile;
+  padding: 1rem;
+  margin: 10rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 1px rgba(214, 214, 214, 1);
+
+  .description {
+    padding: 1.2rem;
+    text-align: center;
+    h2 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $grayishBlue;
+      padding: 0 1rem 0 1rem;
+    }
+  }
+}
+
+.qr-img {
+  img {
+    border-radius: 10px;
+  }
+}
+
+.attribution {
+  display: none;
+}
