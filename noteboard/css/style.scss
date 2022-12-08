@@ -1,0 +1,315 @@
+// Size Mixin: Width + Height
+@mixin size($width,$height) {
+	width: $width;
+	height: $height;
+}
+// Background Color Mixin
+@mixin bkg($bkg) {
+	background-image: url($bkg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+// Mixin: Transition
+@mixin transition($seconds) {
+	transition: $seconds;
+	-o-transition: $seconds;
+	-moz-transition: $seconds;
+	-webkit-transition: $seconds;
+}
+// Mixin: Box Shadow
+@mixin box-shadow($prop) {
+	box-shadow: $prop;
+	-o-box-shadow: $prop;
+	-ms-box-shadow: $prop;
+	-moz-box-shadow: $prop;
+	-webkit-box-shadow: $prop;
+}
+// Mixin: Transform
+@mixin transform($property) {
+	transform: $property;
+	-o-transform: $property;
+	-ms-transform: $property;
+	-moz-transform: $property;
+	-webkit-transform: $property;
+}
+// Every Element
+* {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+	outline: none !important;
+	@include transition(0.4s);
+	font-family: 'Quicksand', sans-serif;
+	box-sizing: border-box;
+}
+// Every Link
+a {
+	text-decoration: none !important;
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+// Every list
+li {
+list-style-type: none;
+}
+// Unselectable icons and logo
+i, #logo {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+// Custom scrollbar
+body::-webkit-scrollbar {
+	width: 5px;
+}
+body::-webkit-scrollbar-track {
+	@include box-shadow(none);
+	background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+	border-radius: 5px;
+}
+body, html {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.header {
+	width: 100%;
+	max-width: 1024px;
+	height: 60px;
+	margin: 0 auto;
+	padding: 7.5px 25px;
+	border: 0.5px solid #ccc;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;	
+	// Logo
+	#logo {
+		width: 145px;
+		height: 45px;
+		border-radius: 3px;
+		display: inline-block;
+		.logo-content {
+			height: 45px;
+			float: left;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		#img {
+			width: 45px;
+			height: 45px;
+			padding: 7.5px;
+		}
+		#app-name {
+			width: calc(100% - 45px);
+			height: 25px;
+			padding: 0px 7.5px;
+			color: #000;
+			line-height: 25px;
+			margin-top: 0px;
+			border-left: 1px solid #ccc;		
+		}
+	}
+	.add-note-btn {
+		width: 45px;
+		height: 45px;
+		background-color: #FDC57B;
+		color: #fff;
+		font-size: 35px;
+		text-align: center;
+		line-height: 45px;
+		margin: 0 auto;
+		border-radius: 50%;
+		position: relative;
+		top: -22.5px;
+		cursor: pointer;
+		&:after {
+			content: attr(data-func);
+			width: 110px;
+			height: 30px;
+			display: inline-block;
+			line-height: 26px;
+			position: absolute;
+			left: 50px;
+			top: calc(50% - 15px);
+			font-size: 14px;
+			border-radius: 15px;
+			color: #FDC57B;
+			background: rgb(255,255,255);
+			border: 2px solid #FDC57B;
+			transform: translateX(-5px);
+			font-weight: bold;
+			visibility: hidden;
+			box-sizing: border-box;
+			transition: visibility 0.2s, transform 0.4s !important;		
+		}
+		&:hover:after {
+			visibility: visible;
+			transform: translateX(0px);
+		}
+	}
+}
+.dashboard {
+	width: 100%;
+	max-width: 1024px;
+	height: calc(100vh - 120px);
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	overflow-x: auto;
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+	&::-webkit-scrollbar-track {
+		@include box-shadow(none);
+		background: #fff;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #ccc;
+		border-radius: 3px;
+	}
+	.note {
+		min-width: 350px;
+		max-height: 95%;
+		border-radius: 3px;
+		background: moccasin;
+		padding: 3px 3px 10px 3px;
+		overflow: auto;
+		color: #000;
+		margin: 10px;
+		margin-left: 0;
+		.note-header {
+			width: 332px;
+			height: 40px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			input {
+				width: 295px;
+				height: 32px;
+				border: 0;
+				padding: 10px;
+				float: left;
+				box-sizing: border-box;
+				background: transparent;
+				font-weight: bold;
+				border-radius: 5px;
+				font-size: 16px;				
+				&:focus { background: rgba(255, 255, 255, 0.2); }
+			}
+			.delete {
+				width: 32px;
+				height: 32px;
+				float: left;
+				font-size: 20px;								
+				background: transparent;
+				color: #000;
+				border-radius: 15px;
+				border: 0;
+				padding: 0;
+				box-sizing: border-box;
+				cursor: pointer;
+				&:hover {
+					background: rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+		textarea {
+			min-width: 332px;
+			max-width: 332px;
+			height: 40px;
+			padding: 5px 10px;
+			margin: 5px auto 0 auto;
+			border: 0;
+			display: block;
+			font-size: 16px;
+			background: transparent;
+			resize: none;
+			color: #000;
+			border-radius: 5px;
+			&::-webkit-scrollbar {
+				width: 2px;
+				border-radius: 3px;
+			}
+			&:focus {
+				background: rgba(255, 255, 255, 0.2);
+			}
+		}
+		// Custom scrollbar
+		&::-webkit-scrollbar {
+			width: 2.5px;
+			border-radius: 3px;
+		}
+		&::-webkit-scrollbar-track {
+			@include box-shadow(none);
+			background: moccasin;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 1.5px;
+		}
+	}
+}
+#dev {
+	width: 200px;
+	height: 35px;
+	border-radius: 17.5px;
+	background: rgba(255, 228, 181, 0.5);
+	margin: 12.5px auto;
+	text-align: center;
+	line-height: 35px;
+	i { color: red; }
+}
+
+
+@media screen and (max-width: 1024px) {
+	.dashboard {
+		width: calc(100% - 40px);
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header {
+		position: relative;
+		.add-note-btn {
+			position: absolute;
+			right: 25px; top: 7.5px;
+			&:after {
+				left: -110px;
+				transform: translateX(1px);
+				visibility: hidden;
+				box-sizing: border-box;
+				transition: visibility 0.2s, transform 0.4s !important;		
+			}
+			&:hover:after {
+				visibility: visible;
+				transform: translateX(-5px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		width: 400px;
+	}
+	.dashboard {
+		.note {
+			width: 100%;
+		}
+	}
+}
