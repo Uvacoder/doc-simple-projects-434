@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>🎨 Draw</title>
+</head>
+
+<body>
+	<div class="export-overlay">
+		<div class="export-box">
+			<img class="image-to-export" src="./name.png" alt="Image">
+			<div class="actions">
+				<button class="download">
+					Download
+					<i data-feather="download"></i>
+				</button>
+				<button class="close-popup">
+					Cancel
+					<i data-feather="x-circle"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="canvas-container">
+		<canvas class="canvas"></canvas>
+		<div class="tools">
+			<div class="tools__color" title="Change Color">
+				<span class="current-color"></span>
+				<div class="color-list">
+					<span data-color="#0be881"></span>
+					<span data-color="#ffd32a"></span>
+					<span data-color="#ffa801"></span>
+					<span data-color="#ff3f34"></span>
+					<span data-color="#3498db"></span>
+					<span data-color="#3c40c6"></span>
+					<span data-color="#1e272e"></span>
+					<span data-color="rainbow"></span>
+				</div>
+			</div>
+			<div class="tools__export" title="Save / Export Image">
+				<i data-feather="save"></i>
+			</div>
+			<div class="tools__erase" title="Eraser">
+				<i data-feather="delete"></i>
+			</div>
+			<div class="tools__clear" title="Clear Board">
+				<i data-feather="circle"></i>
+			</div>
+			<div class="tools__stroke-width" title="Adjust Brush Width">
+				<span class="little-brush"></span>
+				<input type="range" min="5" max="75" />
+				<span class="big-brush"></span>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="src/app.js"></script>
+	<!-- <script src="dist/bundle.js"></script> -->
+</body>
+
+</html>
