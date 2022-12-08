@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS files -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="responsive.css" type="text/css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/e2afe0d504.js" crossorigin="anonymous"></script>
+    <title>Tip calculator app</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Title Portion -->
+        <div class="title">
+            <div>SPLI</div>
+            <div>TIER</div>
+        </div>
+
+        <!-- Main Box -->
+        <div class="main-container">
+
+            <!-- Left Portion -->
+            <div class="left">
+                <label for="bill-amt">Bill</label>
+                <i class="fas fa-dollar-sign icon"></i>
+                <input type="number" id="bill-amt">
+                <label for="tip-per">Select Tip %</label>
+                <div class="per-box" id="per-box">
+                    <div class="tipPercent" id="five" onclick="setFive()">5%</div>
+                    <div class="tipPercent" id="ten" onclick="setTen()">10%</div>
+                    <div class="tipPercent" id="fifteen" onclick="setFifteen()">15%</div>
+                    <div class="tipPercent" id="twentyFive" onclick="setTwentyFive()">25%</div>
+                    <div class="tipPercent" id="fifty" onclick="setFifty()">50%</div>
+                    <div class="tipPercent" id="custom">
+                        <label for="customInput" id="customTxt">Custom</label>
+                        <input type="number" id="customInput">
+                    </div>
+                </div>
+
+                <!-- Tip Percentage -->
+                <div class="tag" id="tipTag">
+                    <!-- Percent will show through javascript -->
+                </div>
+
+                <label for="person-no">Number of People</label>
+                <i class="fas fa-user-alt icon"></i>
+                <input type="number" id="user">
+
+                <!-- Zero warning -->
+                <div class="tag" id="error">Member number can't be 0</div>
+            </div>
+
+            <!-- Right Portion -->
+            <div class="right">
+                <div class="right-head">
+                    <div class="right-left">
+                        <div class="main-head">Tip Amount</div>
+                        <div class="per-person">/per person</div>
+                    </div>
+                    <div class="amt" id="tipAmt">
+                        $0.00
+                    </div>
+                </div>
+                <div class="right-head">
+                    <div class="right-left">
+                        <div class="main-head">Total</div>
+                        <div class="per-person">/per person</div>
+                    </div>
+                    <div class="amt" id="totalAmt">
+                        $0.00
+                    </div>
+                </div>
+                <div class="button" id="reset-button">
+                    <button>RESET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Tag -->
+    <script src="script.js"></script>
+</body>
+
+</html>
