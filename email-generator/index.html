@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+  </head>
+
+  <body>
+    <section x-data="{ 
+                     subjectValue: 'Example', 
+                     senderValue: 'example@email.com', 
+                     bodyValue: 'This is an example email'}" class="box-border bg-gray-400 h-screen flex flex-col w-full">
+    
+      <label for="sender" class="font-semibold text-sm m-4 text-gray-700 mb-0 p-0">To</label>
+      <input id="sender" class="text-md m-4 mt-1 p-1 rounded border border-solid border-red-100 border-opacity-100"
+        type="text" x-bind:value="senderValue" x-model="senderValue" />
+    
+      <label for="subject" class="font-semibold text-sm m-4 text-gray-700 mb-0 p-0">Subject</label>
+      <input id="subject" class="text-md m-4 mt-1 p-1 rounded border border-solid border-red-100 border-opacity-100"
+        type="text" x-bind:value="subjectValue" x-model="subjectValue" />
+    
+      <label for="body" class="font-semibold text-sm m-4 text-gray-700 mb-0 p-0">Body</label>
+      <textarea id="body" class="text-md m-4 mt-1 p-1 rounded border border-solid border-red-100 border-opacity-100"
+        type="text" x-bind:value="bodyValue" x-model="bodyValue"></textarea>
+    
+    
+      <a class="flex justify-center items-center box-border m-4 p-5 text-center h-40 bg-blue-300 block font-semibold text-blue-900 hover:underline"
+        x-text='`mailto:${senderValue}?subject=${subjectValue}&body=${bodyValue}`'
+        x-bind:href='`mailto:${senderValue}?subject=${subjectValue}&body=${bodyValue}`'>link</a>
+      </div>
+  </body>
+</html>
