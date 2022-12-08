@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Quotee</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="data/quotiq.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Font Awesome -->
+		<script src="https://use.fontawesome.com/512a791d9f.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="body">
+		<div id="logo">
+      <img class='logo-content' id="img" src="data/logo.svg" alt='App Logo'/>
+      <span class='logo-content' id='logo-divider'></span>
+      <h5 class='logo-content' id="app-name">Quotee</h5>
+    </div>
+		<div id="author-photo"></div>
+		<div id="quote-holder" class="text-center">
+			<div class="align">
+				<p id="quote">
+					Click the button to begin <br>
+	        <i class="material-icons" id="down-arrow">arrow_downward</i>
+				</p>
+				<h4 id="author-name"></h4>
+			</div>
+		</div>
+		<div class="buttons">
+		  <button id="generate-btn" class="text-center">
+        <i class="material-icons text-center">format_quote</i>
+      </button>
+      <a target="_blank" id="tweet">
+        <i class="fa fa-twitter"></i>
+        <p>Tweet</p>
+      </a>
+		</div>
+		<p id="dev">
+			Made with <i class="fa fa-heart"></i> by <a href="https://github.com/oneminch">Dawit</a>
+		</p>
+	</div>
+	<!-- Custom Js -->
+	<script src="js/main.js"></script>
+</body>
+</html>
