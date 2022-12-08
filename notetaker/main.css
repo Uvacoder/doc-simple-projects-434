@@ -1,0 +1,163 @@
+/* AUTHOR: ELDERNY
+SOCIAL MEDIA: @elderny1 on telegram */
+.on_readmore {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    background-color: #ccc;
+}
+
+.submitPart {
+    display: flex;
+    width: 100%;
+}
+
+.importantMarker {
+    margin: 0 0 0 79%;
+}
+@media only screen and (min-width: 1199px) and (max-width:1400px){
+    .importantMarker{
+        margin: 0 0 0 75%;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width:1199px){
+    .importantMarker{
+        margin: 0 0 0 70%;
+    }
+}
+@media only screen and (min-width: 770px) and (max-width:1000px){
+    .importantMarker{
+        margin: 0 0 0 60%;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width:770px){
+    .importantMarker{
+        margin: 0 0 0 45%;
+    }
+}
+@media only screen and (min-width: 494px) and (max-width:540px){
+    .importantMarker{
+        margin: 0 0 0 40%;
+    }
+}
+@media only screen and (min-width: 430px) and (max-width:494px){
+    .importantMarker{
+        margin: 0 0 0 30%;
+    }
+}
+@media only screen and (min-width: 405px) and (max-width:430px){
+    .importantMarker{
+        margin: 0 0 0 25%;
+    }
+}
+@media only screen and (min-width: 383px) and (max-width:405px){
+    .importantMarker{
+        margin: 0 0 0 20%;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width:383px){
+    .importantMarker{
+        margin: 0 0 0 10%;
+    }
+}
+.ImpChk1 {
+    border: 4px solid rgb(111, 0, 255);
+}
+
+.is_flex {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    bottom: 10px;
+}
+.is_flex_new{
+    display:flex;
+    margin-top: 0px;
+}
+.content_joiner{
+    margin-top: -25px;
+
+}
+.is_flex_title {
+    display: flex;
+    width: 50%;
+}
+
+.username {
+    display: block;
+    position: relative;
+    left: 45%;
+    top: 9px;
+    height: 25px;
+    padding: 0px 2.5px;
+    background-color: rgb(221 98 28);
+    color: white;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-size: 12px;
+}
+
+.FixWid {
+    position: relative;
+    height: 260px;
+}
+
+/*** The readMore Part of the Note ***/
+.big_card {
+    position: absolute;
+    box-shadow: 0 12px 20px;
+    display: block;
+    z-index: 10;
+    width: 94% !important;
+    height: 78vh;
+    top: 60px;
+    left: 2.5%;
+}
+.fix_margin{
+    margin-top: -8px;
+}
+.zoomed_title {
+    position: relative;
+    font-size: 18px;
+    right: -0.5%;
+    top: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.zoomed_username {
+    position: relative;
+    right: -0.6%;
+    top: -2px;
+}
+
+.zoomed_time {
+    position: relative;
+    right: -0.5%;
+    top: -1.8px;
+}
+
+.zoomed_text {
+    font-family: Georgia;
+    font-size: 16px;
+    height: 60%;
+    overflow: auto;
+}
+
+.zoomed_heading {
+    margin-bottom: -20px;
+}
+
+.zoomed_close_btn {
+    position: relative;
+    margin: 0 0 0 99.2%;
+    top: -48px;
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px){
+    
+.zoomed_close_btn {
+    margin: 0 0 0 98.2%;
+}
+}
