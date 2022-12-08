@@ -1,0 +1,291 @@
+@media(max-width: 1550px){
+    .wrapper{
+        width: 88%;
+    }
+
+    .login-container{
+        width: 50%;
+    }
+
+    .content-box{
+        width: 35%;
+    }
+}
+
+@media(max-width: 1450px){
+    .wrapper{
+        width: 95%;
+    }
+
+    .login-container{
+        width: 55%;
+    }
+
+    .content-box{
+        width: 40%;
+    }
+}
+
+@media(max-width: 1300px){
+    .wrapper{
+        width: 100%;
+    }
+
+    .login-container{
+        width: 60%;
+    }
+
+    .content-box{
+        width: 45%;
+        left: 30%;
+    }
+}
+
+@media(max-width: 1200px){
+    .wrapper .notes-container #notes{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header{
+        padding: 10px 100px;
+    }
+
+    .login-container{
+        width: 65%;
+    }
+
+    .content-box{
+        width: 50%;
+    }
+
+    .wrapper .text-input p,
+    .wrapper .text-input button{
+        margin: 3px 35px;
+    }
+}
+
+@media(max-width: 1000px){
+    header{
+        padding: 8px 60px;
+    }
+
+    .wrapper .text-input{
+        width: 75%;
+    }
+
+    .login-container{
+        width: 75%;
+    }
+
+    .content-box{
+        width: 55%;
+        left: 25%;
+    }
+}
+
+@media(max-width: 900px){
+    .wrapper .notes-container .cards{
+        padding: 20px;
+        margin: 5px;
+    }
+
+    .login-container{
+        width: 80%;
+    }
+
+    .content-box{
+        width: 60%;
+        left: 20%;
+    }
+}
+
+@media(max-width: 800px){
+    .wrapper .notes-container{
+        padding: 10px;
+    }
+
+    .wrapper .text-input button,
+    .wrapper .text-input p{
+        margin: 3px 30px;
+    }
+
+    .login-container{
+        width: 85%;
+    }
+}
+
+@media(max-width: 750px){
+    .wrapper .notes-container{
+        padding: 13px;
+        width: 80%;
+    }
+
+    .wrapper .notes-container #notes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header{
+        padding: 10px 30px;
+    }
+
+    .login-container{
+        width: 85%;
+    }
+
+    .login-container form {
+        width: 80%;
+    }
+
+    .content-box{
+        width: 70%;
+        left: 17%;
+    }
+}
+
+@media(max-width: 650px){
+    .wrapper .notes-container{
+        width: 95%;
+    }
+
+    .wrapper .text-input{
+        width: 85%;
+    }
+
+    .login-container{
+        width: 90%;
+        margin: 80px auto 60px auto;
+    }
+
+    .login-container form {
+        width: 90%;
+    }
+
+    .content-box{
+        width: 75%;
+        top: 200px;
+        left: 13%;
+    }
+}
+
+@media(max-width: 540px){
+    .wrapper .notes-container{
+        width: 100%;
+    }
+
+    .wrapper .text-input{
+        width: 95%;
+        padding: 8px;
+    }
+
+    header{
+        padding: 10px 30px;
+    }
+
+    header .search-bar i{
+        display: block;
+        font-size: 20px;
+    }
+
+    header .search-bar input{
+        display: none;
+    }
+
+    .login-container{
+        width: 97%;
+        margin: 50px auto 60px auto;
+    }
+
+    .login-container form {
+        width: 100%;
+    }
+
+    .content-box{
+        width: 80%;
+        top: 170px;
+        left: 10%;
+    }
+}
+
+@media(max-width: 500px){
+    h1{
+        font-size: 30px;
+    }
+
+    .wrapper .text-input textarea{
+        width: 95%;
+    }
+
+    h1:after{
+        height: 5px;
+        width: 60px;
+    }
+
+    .wrapper .custom-message p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .wrapper .notes-container #notes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .wrapper .notes-container{
+        width: 80%;
+        padding: 10px;
+    }
+
+    .wrapper .text-input button,
+    .wrapper .text-input p{
+        margin: 3px 10px;
+    }
+
+    .wrapper .user-logout{
+        padding: 7px 0;
+        font-size: 20px;
+    }
+
+    .login-container{
+        padding: 30px 60px;
+    }
+
+    .content-box{
+        width: 85%;
+        top: 150px;
+        left: 8%;
+    }
+}
+
+@media(max-width: 400px){
+    .wrapper .notes-container{
+        width: 100%;
+    }
+
+    header{
+        padding: 10px 15px;
+    }
+
+    .login-container{
+        padding: 30px 30px;
+    }
+
+    .content-box{
+        width: 90%;
+        left: 5%;
+        top: 70px;
+    }
+}
+
+@media(max-width: 350px){
+    .wrapper .notes-container{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-container{
+        padding: 30px 10px;
+    }
+
+    .content-box{
+        width: 90%;
+    }
+}
