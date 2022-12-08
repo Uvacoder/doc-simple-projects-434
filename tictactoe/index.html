@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <div id="app">
+  <h1>Tic Tac Toe</h1>
+  <!-- app -->
+  <div id="container">
+    <div
+      v-for="cell in cells"
+      key="cell.id"
+      :class="['cell', `player${cell.player}`]"
+      v-on:click="onPress(cell.id)"
+    >
+      {{cell.id}}
+    </div>
+  </div>
+  <div v-if="win">
+    <p>
+      <span :class="[`player${turn}`, 'win-box']"></span> {{ win }}
+    </p>
+
+    <button v-on:click="restartGame">Restart</button>
+  </div>
+</div>
+  <!-- JavaScript -->
+  <script src="vue.js"></script>
+</body>
+
+</html>
