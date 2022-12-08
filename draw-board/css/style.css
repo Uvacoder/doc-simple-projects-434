@@ -1,0 +1,188 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.export-overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.export-overlay .export-box {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-height: 300px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+}
+.export-overlay .export-box > * {
+  margin: 15px auto;
+}
+.export-overlay .export-box .actions {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.export-overlay .export-box .actions button {
+  width: 115px;
+  min-height: 40px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: none;
+  padding: 0 5px;
+  margin: 0;
+}
+.export-overlay .export-box .actions .close-popup {
+  background-color: #d1274b;
+}
+.export-overlay .export-box .actions .download {
+  background-color: #4dd599;
+}
+.export-overlay .export-box img {
+  width: 75%;
+  height: auto;
+  border: 0.1px solid #ddd;
+  border-radius: 3px;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+.canvas-container .tools {
+  width: 35%;
+  min-width: 640px;
+  min-height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  transform: translateY(-60px);
+  border: 2px solid #000;
+}
+.canvas-container .tools > * {
+  width: 45px;
+  height: 40px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas-container .tools__color {
+  position: relative;
+}
+.canvas-container .tools__color .current-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: cyan;
+}
+.canvas-container .tools__color .color-list {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: -85px;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(50, 50, 50, 0.25);
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  grid-template-rows: auto;
+  display: none;
+}
+.canvas-container .tools__color .color-list span {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: cyan;
+}
+.canvas-container .tools__color .color-list [data-color="#0be881"] {
+  background-color: #0be881;
+}
+.canvas-container .tools__color .color-list [data-color="#ffd32a"] {
+  background-color: #ffd32a;
+}
+.canvas-container .tools__color .color-list [data-color="#ffa801"] {
+  background-color: #ffa801;
+}
+.canvas-container .tools__color .color-list [data-color="#ff3f34"] {
+  background-color: #ff3f34;
+}
+.canvas-container .tools__color .color-list [data-color="#3498db"] {
+  background-color: #3498db;
+}
+.canvas-container .tools__color .color-list [data-color="#3c40c6"] {
+  background-color: #3c40c6;
+}
+.canvas-container .tools__color .color-list [data-color="#1e272e"] {
+  background-color: #1e272e;
+}
+.canvas-container .tools__color .color-list [data-color=rainbow] {
+  background-image: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+}
+.canvas-container .tools__color .active {
+  display: grid;
+}
+.canvas-container .tools__tool {
+  width: 45px;
+}
+.canvas-container .tools__stroke-width {
+  width: auto;
+}
+.canvas-container .tools__stroke-width > * {
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #000;
+}
+.canvas-container .tools__stroke-width .little-brush {
+  min-width: 10px;
+  min-height: 10px;
+}
+.canvas-container .tools__stroke-width .big-brush {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
