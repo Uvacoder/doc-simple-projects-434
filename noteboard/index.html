@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Noteboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+</head>
+
+<body onload="init();">
+  <div class="wrapper">
+    <div class="header">
+      <div id="logo">
+        <img class='logo-content' id="img" src="css/logo.svg" alt='App Logo' />
+        <h4 class='logo-content' id="app-name">Noteboard</h4>
+      </div>
+      <div class="add-note-btn" data-func="Add a Note">📝</div>
+    </div>
+    <div class="dashboard">
+      <!-- <div class="note">
+          <div class="note-header">
+            <input type="text" class="title" placeholder="Title" maxlength="30">
+            <button class="delete"><i class="ion-ios-trash-outline"></i></button>    
+          </div>
+          <textarea rows="1" class="body" name="Note body" placeholder="Body"></textarea>
+        </div> -->
+    </div>
+  </div>
+  <p id="dev">
+    Made with 💛 by <a href="https://github.com/oneminch">Dawit</a>
+  </p>
+  <script src='js/main.js'></script>
+</body>
+
+</html>
