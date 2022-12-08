@@ -1,0 +1,158 @@
+* {
+  outline: none;
+  appearance: none;
+  transition: 0.4s;
+  font-family: 'Quicksand';
+}
+#body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #1abc9c;
+  padding-top: 30px;
+}
+#logo {
+  width: 126px;
+  height: 45px;
+  margin: 20px auto 50px auto;
+}
+#logo .logo-content {
+  display: inline-block;
+  height: 45px;
+  float: left;
+  line-height: 45px;
+}
+#logo #img {
+  width: 45px;
+  height: 45px;
+  padding: 7.5px;
+}
+#logo #logo-divider {
+  width: 1px;
+  height: 20px;
+  margin-top: 12.5px;
+  background: #fff;
+}
+#logo #app-name {
+  width: 80px;
+  height: 45px;
+  padding: 0px 7.5px;
+  color: #fff;
+  margin-top: 0px;
+  font-weight: bold;
+}
+#quote-holder {
+  width: 60%;
+  height: 200px;
+  padding: 5% !important;
+  margin: 0px auto 50px auto;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  background-color: #fff;
+  color: #1abc9c;
+  display: table;
+  border-radius: 5px;
+}
+#quote-holder .align {
+  display: table-cell;
+  vertical-align: middle;
+}
+#author-name {
+  text-transform: capitalize;
+}
+#author-photo {
+  width: 60px;
+  height: 60px;
+  margin: 50px auto 0px auto;
+  position: relative;
+  top: 30px;
+  background-color: #ddd;
+  border-radius: 100%;
+  background-image: url("../data/brain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.buttons {
+  border-radius: 25px;
+  max-width: 175px;
+  height: 50px;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  overflow: hidden;
+}
+#generate-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #1abc9c;
+  border: none;
+  display: inline-block;
+  float: left;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+#generate-btn i {
+  line-height: 50px;
+}
+#generate-btn:hover {
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+#tweet {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #1DA1F2;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  float: right;
+}
+#tweet p {
+  display: none;
+  font-size: 15px;
+  line-height: 50px;
+  float: right;
+}
+#tweet:hover {
+  width: 100px;
+  padding-right: 15px;
+}
+#tweet:hover p {
+  display: inline-block;
+}
+#dev {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  bottom: 25px;
+}
+#dev i {
+  color: #e74c3c;
+}
+#down-arrow {
+  margin-top: 20px;
+  animation: arrow 1s ease-in-out 0s infinite alternate;
+}
+@keyframes arrow {
+  50% {
+    transform: translateY(30px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #quote-holder {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #quote-holder {
+    width: 90%;
+    height: 225px;
+  }
+}
