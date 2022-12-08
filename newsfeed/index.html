@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Newsfeed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- List of bookmarks -->
+    <div class="bookmarks-list">
+        <!-- <div class="bookmarked-article">
+            <div class="bookmarked-article-info">
+                <a href="#" class="bookmarked-article-title">sdsd asds sadfs safvafs safvsdf asfd</a>
+                <p href="#" class="bookmarked-article-source">BBC</p>
+            </div>
+            <div class="buttons">
+                <div class="share bookmarked-article-buttons"><i class="ion-ios-upload-outline"></i></div>
+                <div class="bookmark bookmarked-article-buttons"><i class="ion-android-bookmark"></i></div>
+            </div>
+        </div> -->
+    </div>
+    <!-- Header -->
+    <div class="header-container">
+        <div class="header">
+            <!-- Button to show and hide tags -->
+            <div class="show-tags">
+                <i data-feather="tag"></i>
+            </div>
+            <span class="tag-arrow"></span>
+            <!-- Newsfeed logo -->
+            <a href="https://oneminch.dev/newsfeed" id="logo">
+                <img class='logo-content img' src="media/logo.svg" alt='App Logo'/>
+                <span class='logo-content logo-divider'></span>
+                <h4 class='logo-content app-name'>Newsfeed</h4>
+            </a>
+            <!-- Bookmark button -->
+            <div class="header-buttons bookmarks">
+                <i data-feather="bookmark"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Tags for news -->
+    <div class="tags">
+        <p class="tag" data-tag="General">GENERAL</p>
+        <p class="tag" data-tag="Business">BUSINESS</p>
+        <p class="tag" data-tag="Entertainment">ENTERTAINMENT</p>
+        <p class="tag" data-tag="Health">HEALTH</p>
+        <p class="tag" data-tag="Science">SCIENCE</p>
+        <p class="tag" data-tag="Sports">SPORTS</p>
+        <p class="tag" data-tag="Technology">TECHNOLOGY</p>
+    </div>
+    <!-- Main Body -->
+    <div class="main-body">
+        <div class="info-key-wrapper">
+            <!-- Date and Weather -->
+            <div class="daily-info">
+                <div class="weather"></div>
+                <p class="date"></p>
+            </div>
+			<p class="attribution">Powered by <a href='https://newsapi.org/'>News API</a></p>
+            <!-- Keys -->
+            <div class="keys">
+                <div class="key" data-key="Apple">Apple</div>
+                <div class="key" data-key="Google">Google</div>
+                <div class="key" data-key="Stock">Stock</div>
+                <div class="key" data-key="Cryptocurrency">Cryptocurrency</div>
+                <div class="key" data-key="Music">Music</div>
+            </div>
+        </div>
+        <!-- Main Articles -->
+        <div class="main-articles">
+            <!-- Featured Article -->
+            <!-- <div class="featured">
+                <div class="featured-info">
+                    <span class="featured-label">Featured</span>
+                    <a class="featured-title"></a>
+                    <a href="#" class="featured-source"></a>
+                    <div class="bookmark featured-buttons"><i class="ion-android-bookmark"></i></div>
+                    <div class="share featured-buttons"><i class="ion-ios-upload-outline"></i></div>
+                </div>
+            </div> -->
+<!--             <div class="articles"> -->
+                <!-- <div class="article">
+                    <div class="image"></div>
+                    <div class="article-info">
+                        <a href="https://www.facebook.com" class="article-title title">
+                            Elon Musk is set to launch his Falcon Heavy rocket, 
+                            a flamethrower of another sort 
+                        </a>
+                        <a href="#" class="article-source source">The Washington Post</a>
+                    </div>
+                    <div class="buttons">
+                        <p class="timePublished">24mins</p>
+                        <div class="share article-buttons"><i class="ion-ios-upload-outline"></i></div>
+                        <div class="bookmark article-buttons"><i class="ion-android-bookmark"></i></div>
+                    </div>
+                </div> -->
+<!--             </div> -->
+        </div>
+        <!-- Imageless articles -->
+        <div class="imageless-articles">
+            <!-- <div class="imageless-article">
+                <div class="imageless-article-info">
+                    <a href="#" class="imageless-article-title"></a>
+                    <p href="#" class="imageless-article-source"></p>
+                </div>
+                <div class="buttons">
+                    <p class="timePublished"></p>
+                    <div class="share imageless-article-buttons"><i class="ion-ios-upload-outline"></i></div>
+                    <div class="bookmark imageless-article-buttons"><i class="ion-android-bookmark"></i></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script data-goatcounter="https://oneminch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
