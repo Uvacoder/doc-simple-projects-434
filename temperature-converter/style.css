@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #2e86de;
+}
+
+.main{
+    background-color: #ecf0f1;
+    width: 50%;
+    height: auto;
+    margin: 100px auto;
+    padding: 85px 50px 150px 50px;
+    border-radius: 5px;
+}
+
+header h1{
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
+
+.box1 , .box2{
+    display: inline-block;
+    width: 49%;
+    padding: 40px 20px;
+}
+
+.box1 h3, .box2 h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    padding: 10px;
+}
+
+input{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    border: none;
+    outline-color: #F79F1F;
+    
+}
+
+.formula header{
+    background-color: #ff9f43;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.formula .main-formula{
+    display: inline-block;
+    margin-left: 25px;
+}
