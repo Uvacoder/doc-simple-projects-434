@@ -1,0 +1,218 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+/* input arrows remove */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */
+
+.container{
+    background: hsl(185, 41%, 84%);
+    height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: hsl(183, 100%, 15%);
+    padding-top: 100px;
+}
+
+.container .main-container{
+    background-color: hsl(0, 0%, 100%);
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.container .main-container .left{
+    width: 50%;
+    margin: 50px;
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.container .main-container .left label{
+    display: block;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin: 40px 10px 10px 0px;
+}
+
+.container .main-container .left input{
+    font-size: 28px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    font-weight: 700;
+    padding: 5px 15px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.container .main-container .left i{
+    position: absolute;
+    font-size: 20px;
+}
+
+.container .main-container .left .icon{
+    padding: 16px;
+    opacity: 50%;
+}
+
+.container .main-container .left .per-box{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+   justify-items: center;
+   row-gap: 10px;
+   column-gap: 10px;
+}
+
+.container .main-container .left .per-box div{
+    padding: 7px 10px;
+    font-size: 24px;
+    width: 130px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.container .main-container .left .per-box .tipPercent.active{
+    background-color: #9fe8df;
+    color: hsl(183, 100%, 15%);
+}
+
+.container .main-container .left .per-box div:hover{
+    background-color: #9fe8df;
+    color: hsl(183, 100%, 15%);
+    transition: 0.6s ease;
+}
+
+.container .main-container .left .per-box #custom{
+    /* padding: 0; */
+    transition: 0s ease;
+}
+
+.container .main-container .left .per-box #custom label {
+    margin: 0;
+    padding: 3px 10px;
+}
+
+.container .main-container .left .per-box #custom #customInput{
+    display: none;
+}
+
+.container .main-container .left .tag{
+    color: red;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 10px 0 0;
+}
+
+.container .main-container .left #error,
+.container .main-container .left #tipTag{
+    visibility: hidden;
+    margin-bottom: 15px;
+}
+
+.container .main-container .left .per-box input{
+    display: inline-block;
+    width: 130px;
+    height: 50px;
+    padding: 0px;
+    font-size: 24px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container .main-container .left .per-box input:hover{
+    background-color: #9fe8df;
+    color: hsl(183, 100%, 15%);
+}
+
+.container .main-container .right{
+    width: 50%;
+    margin: 40px;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 20px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding-top: 50px;
+}
+
+.container .main-container .right .right-head{
+    font-size: 20px;
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .main-container .right .right-head .right-left .main-head{
+    font-size: 20px;
+    letter-spacing: 0;
+}
+
+.container .main-container .right .right-head .right-left .per-person{
+    font-size: 18px;
+    letter-spacing: 0;
+    color: hsl(184, 14%, 56%);
+}
+
+.container .main-container .right .right-head .amt{
+    font-size: 45px;
+    color: hsl(172, 68%, 45%);
+    letter-spacing: 0;
+}
+
+.container .main-container .right .button{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.container .main-container .right .button button{
+    color: hsl(183, 100%, 15%);
+    background-color: #9fe8df;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 150px;
+    border: none;
+    padding: 3px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .main-container .right .button button:hover{
+    background-color: white;
+    color: hsl(183, 100%, 15%);
+    transition: 0.6s ease;
+}

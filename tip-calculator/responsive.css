@@ -1,0 +1,121 @@
+/* responsive design */
+
+@media (max-width: 1150px) {
+    .container .main-container{
+        width: 95%;
+    }
+
+    .container .main-container .left{
+        margin: 30px;
+    }
+
+    .container .main-container .right{
+        margin: 20px;
+        width: 45%;
+    }
+
+    .container .main-container .right .right-head{
+        width: 90%;
+    }
+}
+
+@media (max-width: 950px) {
+    .container{
+       height: auto;
+       padding: 50px 0;
+    }
+
+    .container .main-container{
+        width: 450px;
+        display: block;
+        padding-bottom: 1px;
+    }
+
+    .container .main-container .left{
+        width: 84%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .container .main-container .left label{
+        margin-top: 30px;
+    }
+
+    .container .main-container .left .per-box div{
+        width: 119px;
+    }
+
+    .container .main-container .left .per-box input{
+        width: 119px;
+    }
+
+    .container .main-container .right{
+        width: 95%;
+        padding: 20px;
+        margin: 0 auto 10px auto;
+    }
+}
+
+@media (max-width: 450px){
+    .container{
+        padding-top: 20px;
+    }
+
+    .container .main-container{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .container .main-container .left{
+        width: 88%;
+    }
+
+    .container .main-container .left input{
+        width: 100%;
+    }
+
+    .container .main-container .left .per-box{
+        width: 100%;
+        row-gap: 5px;
+        column-gap: 5px;
+        align-items: unset;
+        justify-items: unset;
+    }
+
+    .container .main-container .left .per-box div{
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .container .main-container .left .per-box input{
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+
+    .container .main-container .right{
+        padding: 5px;
+    }
+
+    .container .main-container .right .right-head{
+        width: 90%;
+    }
+
+    .container .main-container .right .right-head .amt{
+        font-size: 35px;
+    }
+
+    .container .main-container .right .right-head .right-left .main-head{
+        font-size: 18px;
+    }
+    
+    .container .main-container .right .right-head .right-left .per-person{
+        font-size: 16px;
+    }
+
+    .container .main-container .right .button button{
+        margin-top: 60px;
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+}
