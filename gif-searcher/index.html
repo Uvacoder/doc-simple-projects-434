@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF-Searcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="filter-row">
+        <div class="filter-row-item main-logo">
+            GIF-Searcher
+        </div>
+        <div class="filter-row-item">
+            <input class="filter-tag" type="text" id="filterTag" placeholder="type in a tag">
+        </div>
+    </div>
+    <div class="gif-grid">
+    </div>
+    <div class="popup">
+        <div class="popup-button" onclick="document.querySelector('.popup').style.display='none'"><i class="far fa-times-circle"></i></div>
+        <div class="popup-gif"></div>
+        <div class="popup-title"></div>
+        <div class="popup-tags"></div>
+    </div>
+    <script src="./js/search.js"></script>
+</body>
+</html>
