@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.filter-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.filter-row-item {
+  padding: 20px;
+}
+
+.main-logo {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.filter-tag {
+  font-size: 1.2em;
+  padding: 5px 8px;
+  max-width: 500px;
+  border: solid 2px #aaa;
+  border-radius: 5px;
+  color: #666;
+  outline: none;
+}
+
+.filter-tag::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.filter-tag:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.filter-tag::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.filter-tag::placeholder {
+  color: #aaa;
+}
+
+.gif-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+  width: 100%;
+}
+
+.gif-item {
+  height: 150px;
+  border: solid black;
+  margin: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 80%;
+  border: solid 3px;
+  background: white;
+  padding: 10px;
+  border-radius: 30px;
+  display: none;
+}
+
+.popup-button {
+  font-size: 2em;
+  float: right;
+  cursor: pointer;
+  padding: 7px 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popup-button:hover {
+  color: white;
+}
+
+.popup-gif {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.popup-title {
+  font-size: 2em;
+  font-weight: 900;
+  padding: 15px 5px;
+}
+
+.popup-tags-item {
+  float: left;
+  background: #3498db;
+  padding: 4px 15px 6px;
+  color: white;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.popup-tags-item:hover {
+  background: #2980b9;
+}
+
+@media only screen and (max-width: 1000px) {
+  .gif-grid {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .gif-grid {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gif-grid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */
