@@ -1,0 +1,64 @@
+{
+    "gifs": [
+        {
+            "name": "giannis dancing",
+            "tags": ["giannis", "nba", "basketball", "dance", "dancing", "funny", "bucks"],
+            "src": ".././gifs/giannis-dance.gif"
+        },
+        {
+            "name": "test 1c",
+            "tags": ["test", "alec"],
+            "src": ".././gifs/1c.gif"
+        },
+        {
+            "name": "coder not paying attention",
+            "tags": ["coder", "programmer", "coding", "programming", "fire", "not paying attention", "on fire", "typing"],
+            "src": ".././gifs/code-scroll.gif"
+        },
+        {
+            "name": "lines of code",
+            "tags": ["scroll", "code", "coding", "programming", "program", "text"],
+            "src": ".././gifs/code-scroll.gif"
+        },
+        {
+            "name": "dog on trampoline",
+            "tags": ["dog", "trampoline", "tramp", "bounce", "funny"],
+            "src": ".././gifs/dog-on-tramp.gif"
+        },
+        {
+            "name": "trampoline fail",
+            "tags": ["guy", "trampoline", "tramp", "fail", "funny", "crash", "fall"],
+            "src": ".././gifs/dude-on-tramp.gif"
+        },
+        {
+            "name": "computer fail",
+            "tags": ["computer", "cpu", "fail"],
+            "src": ".././gifs/fail-comp.gif"
+        },
+        {
+            "name": "it's over",
+            "tags": ["vince", "carter", "nba", "it's over", "over", "its over", "basketball", "raptors", "dunk"],
+            "src": ".././gifs/its-over.gif"
+        },
+        {
+            "name": "russell westbrook laughing",
+            "tags": ["russell", "westbrook", "basketball", "laugh", "funny", "nba"],
+            "src": ".././gifs/russell-laugh.gif"
+        },
+        {
+            "name": "jumping on trampoline",
+            "tags": ["jump", "trampoline", "tramp", "fun"],
+            "src": ".././gifs/skyzone-tramp.gif"
+        },
+        {
+            "name": "shocked fan",
+            "tags": ["surprised", "shocked", "basketball", "nba", "sad", "fan"],
+            "src": ".././gifs/upset-fan.gif"
+        },
+        {
+            "name": "trouble getting on shirt",
+            "tags": ["work", "nba", "basketball", "tough", "hard", "funny", "shirt", "fail"],
+            "src": ".././gifs/utah-shirt.gif"
+        }
+    ]
+}
