@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'ibm plex sans' !important;
+    font-weight: 400;
+}
+
+main.content {
+    padding: 32px;
+
+    @media screen and (max-width: 768px) {
+        padding: 16px;
+    }
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__col {
+        &.form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 25%;
+            margin-right: 64px;
+            position: fixed;
+            top: 32px;
+            left: 32px;
+
+            textarea {
+                width: 100%;
+                height: 200px;
+                border: none;
+                border-top: 2px solid rgba(#000, 0.1);
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #000;
+                font-size: 18px;
+                outline: none;
+                margin-bottom: 16px;
+                border-radius: 0;
+            }
+
+            button {
+                display: inline-block;
+                border: none;
+                font-size: 18px;
+                padding: 8px 16px 7px;
+                background: #000;
+                color: #fff;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+        }
+
+        &.log {
+            width: 50%;
+            margin-left: calc(25% + (2 * 32px));
+
+            .entry {
+                &:not(:last-child) {
+                    border-bottom: 2px solid rgba(#000, 0.1);
+                }
+
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+
+                .message {
+                    font-size: 18px;
+                }
+
+                .meta {
+                    margin-top: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                    }
+
+                    .time {
+                        opacity: 0.3;
+                        font-size: 16px;
+                        display: inline-block;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+
+                    .btn {
+                        padding: 8px 16px 7px;
+                        border-radius: 50px;
+                        border: 1px solid rgba(#000, 0.025);
+                        font-size: 16px;
+                        background: rgba(#000, 0.05);
+                        cursor: pointer;
+
+                        &-edit {
+                            margin-right: 8px;
+                        }
+                        
+                        &-delete {
+                            border: 1px solid rgba(#000, 0.1);
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            &.form {
+                top: 0;
+                left: 0;
+                margin-right: 0;
+                width: 100%;
+                padding: 16px;
+
+                .overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(#000, 0.6);
+                    opacity: 0;
+                    transition: opacity 200ms ease;
+                    pointer-events: none;
+                }
+
+                button {
+                    z-index: 2;
+                }
+
+                textarea {
+                    height: 80px;
+                    transition: all 200ms ease;
+                    z-index: 2;
+
+                    &:focus {
+                        height: 250px;
+                        width: calc(100% + 32px);
+                        transform: translate(-16px, -16px);
+                        padding: 16px;
+
+                        & ~ .overlay {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &.log {
+                padding-top: 200px;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}
