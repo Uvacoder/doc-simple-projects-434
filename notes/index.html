@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <main class="content">
+        <div class="layout">
+            <div class="layout__col form">
+                <textarea name="note" type="text" id="note" placeholder="Your note"></textarea>
+                <div class="overlay"></div>
+                <button type="button" id="goButton" onclick="saveNote();">Save note</button>
+            </div>
+            <div class="layout__col log">
+                <div id="log"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/master.js"></script>
+</body>
+</html>
