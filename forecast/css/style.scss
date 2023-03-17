@@ -1,0 +1,262 @@
+// Size Mixin: Width + Height
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+// Background Color Mixin
+@mixin bkg($bkg) {
+  background-color: $bkg;
+}
+// Mixin: Transition
+@mixin transition($seconds) {
+  transition: $seconds;
+  -o-transition: $seconds;
+  -moz-transition: $seconds;
+  -webkit-transition: $seconds;
+}
+// Mixin: Box Shadow
+@mixin box-shadow($prop) {
+  box-shadow: $prop;
+  -o-box-shadow: $prop;
+  -ms-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  -webkit-box-shadow: $prop;
+}
+// Mixin: Transform
+@mixin transform($property) {
+  transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  -webkit-transform: $property;
+}
+// Every Element
+* {
+  border-radius: 0px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -ms-appearance: none !important;
+  -o-appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none;
+  outline: none !important;
+  @include transition(0.3s);
+  font-family: 'Quicksand', sans-serif;
+}
+// Every Link
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+// Unselectable icons and logo
+i, #logo {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+// Main body
+#body {
+  @include size(100%, 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  #logo {
+    width: 126px;
+    height: 45px;
+    margin: 40px auto 50px auto;
+    background: none;
+    .logo-content {
+      height: 45px;
+      float: left;
+      line-height: 45px;
+      background: none;
+    }
+    #img {
+      width: 45px;
+      height: 45px;
+      padding: 7.5px;
+    }
+    #logo-divider {
+      width: 1px;
+      height: 20px;
+      margin-top: 12.5px;
+      background: #fff;
+    }
+    #app-name {
+      width: 80px;
+      height: 45px;
+      padding: 0px 7.5px;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 0px;
+    }
+  }
+  .search-wrapper {
+    @include bkg(rgba(0,0,0,0.75));
+    width: 300px;
+    height: 0px;
+    border-radius: 5px !important;
+    margin: 45px auto 0px auto;
+    overflow: hidden;
+    .search-elements {
+      float: left;
+    }
+    .search-input {
+      @include bkg(transparent);
+      width: 265px;
+      height: 35px;
+      border: none;
+      padding: 0px 10px;
+      color: #fff;
+      line-height: 35px;
+      font-size: 16px;
+    }
+    .search {
+      @include bkg(transparent);
+      width: 35px;
+      height: 25px;
+      border-left: 1px solid rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 25px;
+      margin-top: 5px;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+    }
+  }
+  .toggled-search {
+    height: 35px;
+  }
+  #main-data {
+    @include bkg(rgba(0,0,0,0.75));
+    @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px !important;
+    text-align: center;
+    overflow: hidden;
+    p {
+      font-weight: bold;
+      color: #fff;
+      display: inline-block;
+      text-decoration: underline;
+      text-decoration-color: #3498db;
+      background: none;
+    }
+    #status {
+      @include size(40px, 40px);
+      margin: 15px auto;
+      display: none;
+      background: none;
+    }
+    h1 {
+      color: #3498db;
+      margin-bottom: 35px;
+      background: none;
+    }
+    .errorMsg {
+      margin: auto;
+      width: 70%;
+      line-height: 2;
+      color: #fff;
+      background: none;
+    }
+    table {
+      display: none;
+      border: none;
+      border-collapse: collapse;
+      width: 90%;
+      margin: auto;
+      background: none;
+      tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      td {
+        border: none;
+        color: #fff;
+        padding: 3px;
+        &:first-of-type {
+          text-align: left;
+        }
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+    }
+  }
+  .collapsed-data {
+    height: 175px;
+    margin: 35px auto 20px auto;
+  }
+  .expanded-data {
+    height: 360px;
+    margin: -25px auto 20px auto;
+  }
+  #menus {
+    @include size(300px, 50px);
+    @include bkg(rgba(0,0,0,0.75));
+    @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
+    margin: 25px auto 5px auto;
+    border-radius: 2.5px !important;
+    overflow: hidden;
+    .options {
+      @include size(50px, 30px);
+      cursor: pointer;
+      float: left;
+      color: #3498db;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 30px;
+      user-select: none;
+      background: none;
+      border-left: 0.5px solid rgba(255,255,255,0.2);
+      &:first-of-type {
+        border: none;
+      }
+      i { 
+        font-size: 18px;
+      }
+    }
+    .underline {
+      width: 50px;
+      height: 1px;
+      display: block;
+      border-radius: 0.5px !important;
+      background: #fff;
+      position: relative;
+      top: 49px;
+      transition-timing-function: cubic-bezier(0.65, 0.25, 0.18, 1.35);
+    }
+  }
+  .dev {
+    @include bkg(rgba(0,0,0,0.75));
+    @include box-shadow(1px 1px 10px rgba(0,0,0,0.2));
+    width: 300px;
+    min-height: 60px;
+    margin: 10px auto;
+    display: none;
+    border-radius: 2.5px !important;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
+    a {
+      color: #3498db;
+    }
+    &:before {
+      float: right;
+      content: '';
+      border-style: solid;
+      border-width: 7px;
+      border-color: transparent transparent rgba(0,0,0,0.75) transparent;
+      margin: -22.5px 15px 0px 0px;
+    }
+  }
+  .display {display: block;}
+}
