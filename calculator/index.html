@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CALCULATOR WITH VANILLA JS</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/soapBubbles.css">
+    <link rel="stylesheet" href="./css/togglebtn.css" />
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <!-- favicon  -->
+    <link rel="icon" type="image/x-icon" href="/images/calculator.png" />
+    <!-- Icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body onload="initHaptics()">
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+      
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn"><i class="bi bi-palette-fill"></i><p>Theme</p></a>
+          <div class="dropdown-content">
+            <div onclick="selectTheme('Bubbles')">Bubbles</div>
+            <div onclick="selectTheme('Number Bubbles')">Number Bubbles</div>
+          </div>
+        </div>
+      
+      <div class="toggle-container" class="prevent-select">
+        <input id="switch" type="checkbox" name="theme" />
+        <label class="toggleLabel" for="switch">
+          <i class="bi bi-brightness-high-fill sun"></i>
+          <i class="bi bi-moon-fill moon"></i>
+        </label>
+      </div>
+    </header>
+    <main>
+
+      <div class="background">
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+      </div>
+
+      <div class="background">
+        <div class="soap-bubbles">
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>+</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>1</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>5</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>(</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>/</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>2</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>9</span>
+          </div>
+        </div>
+      </div>
+
+        <section class="prevent-select">
+            <div class="container">
+              <div class="calculator">
+                <div class="display">
+                  <div class="display-1" style="margin: 7px 0px;">0</div>
+                  <div class="display-2" style="margin: 7px 0px;">0</div>
+                </div>
+                <div class="all_button">
+                  <div class="button last-entity-clear">C</div>
+                  <div class="button all-clear">AC</div>
+                  <div class="button operation">%</div>
+                  <div class="button operation">/</div>
+                  <div class="button number">7</div>
+                  <div class="button number">8</div>
+                  <div class="button number">9</div>
+                  <div class="button operation">x</div>
+                  <div class="button number">4</div>
+                  <div class="button number">5</div>
+                  <div class="button number">6</div>
+                  <div class="button operation">-</div>
+                  <div class="button number">1</div>
+                  <div class="button number">2</div>
+                  <div class="button number">3</div>
+                  <div class="button operation">+</div>
+                  <div class="button del number">Del</div>
+                  <div class="button btn-0 number">0</div>
+                  <div class="button number dot">.</div>
+                  <div class="button equal">=</div>
+
+
+                  <!-- <div class="button power">pow</div>
+                  <div class="button radian">Rad</div>
+                  <div class="button degree">deg</div>
+                  <div class="button exponential">exp</div>
+                  <div class="button factorial">x!</div>
+                  <div class="button factorial">x!</div> -->
+
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+  </body>
+  <script src="./js/evalutor.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/togglebtn.js"></script>
+  <script src="./js/dropdown.js"></script>
+</html>
