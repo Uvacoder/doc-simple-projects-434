@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+body {
+  background-image: url(img/webb-dark.png);
+  background-repeat: repeat;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+h1 {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    line-height: 1.1;
+    padding: 6px 0px 0px 3px;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+    margin: 2px auto;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(219, 208, 183);
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    padding-bottom: 2px;
+    font-weight: normal;
+}
+
+.subtitle {
+  display: inline-block;
+}
+
+.subtitle div {
+  display: inline-block;
+}
+
+.subtitle img {
+  max-height: 18px;
+  padding: 0 1px;
+}
+
+.subtitle h2 {
+  display: inline-block;
+  vertical-align: 30%;
+  margin: 0;
+  padding: 0 2px;
+}
+
+.instructions {
+  display: block;
+  line-height: 1.2;
+  color: white;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-top: 20px;
+  margin: auto;
+}
+
+div.container>* {
+  margin-bottom: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.faceDown, .faceUp, .hidden {
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+   position: absolute; 
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  outline: 1.5px solid rgb(27, 25, 22);
+  outline-offset: -1.5px;
+}
+
+.faceDown {
+  background-image: url(img/backside.jpg);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 175px;
+  height: 227.69px;
+  display: inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  -webkit-transition: transform 0.7s;
+  -moz-transition: transform 0.7s;
+  -ms-transition: transform 0.7s;
+  -o-transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.invisible {
+  display: none;
+}
+
+.gameOver {
+    font-family: 'Diplomata SC', cursive, sans-serif;
+    color: rgb(111, 161, 226);
+    font-size: 2vmax;
+    font-stretch: extra-condensed;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 1.2;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid rgb(219, 208, 183);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type=number] {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+/* up-down arrows (not displaying on mobile - to fix):*/
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: "Always Show Up/Down Arrows";
+  opacity: 1;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  line-height: 1;
+}
+
+/*for responsive font size:*/
+
+@media (min-width: 17.5em) {
+  .instructions {
+    font-size: calc(0.875rem + ((1vw - 0.175rem) * 0.2439));
+    min-height: 0vw;
+  }
+  h1 {
+    font-size: calc(1.25rem + ((1vw - 0.175rem) * 0.9146));
+    min-height: 0vw;
+  }
+  h2 {
+    font-size: calc(0.625rem + ((1vw - 0.175rem) * 0.4268));
+    min-height: 0vw;
+  }
+}
+
+@media (min-width: 120em) {
+  .instructions {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.0625rem;
+  }
+}
+
+/* not displaying small card icons on small screens:*/
+
+@media (max-width: 470px) {
+  .subtitle div {
+    display: none;
+  }
+}
