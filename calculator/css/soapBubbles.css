@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@700&display=swap");
+.soap-bubbles {
+  position: absolute;
+  bottom: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+  justify-content: space-around;
+}
+.soap-bubble {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.25);
+  animation: move 10s linear infinite;
+}
+.soap-bubble::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 22.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+.soap-bubble::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+.soap-bubble span {
+  position: absolute;
+  border-radius: 50%;
+}
+.soap-bubble span:nth-child(1) {
+  inset: 5px;
+  border-left: 7px solid #0fb4ff;
+  filter: blur(8px);
+}
+.soap-bubble span:nth-child(2) {
+  inset: 5px;
+  border-right: 7px solid #ff4484;
+  filter: blur(8px);
+}
+.soap-bubble span:nth-child(3) {
+  inset: 10px;
+  border-top: 7px solid #ffeb3b;
+  filter: blur(8px);
+}
+.soap-bubble span:nth-child(4) {
+  inset: 15px;
+  border-left: 7px solid #ff4484;
+  filter: blur(12px);
+}
+.soap-bubble span:nth-child(5) {
+  inset: 5px;
+  border-bottom: 7px solid #fff;
+  filter: blur(10px);
+  transform: rotate(330deg);
+}
+.soap-bubble span:nth-child(6) {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 70px;
+  width: 100px;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+@keyframes move {
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.soap-bubbles div:nth-child(1) {
+  animation-delay: 2.2s;
+  transform: scale(2.15);
+}
+.soap-bubbles div:nth-child(2) {
+  animation-delay: 3.5s;
+  transform: scale(1.55);
+}
+.soap-bubbles div:nth-child(3) {
+  animation-delay: 0.2s;
+  transform: scale(0.35);
+}
+.soap-bubbles div:nth-child(4) {
+  animation-delay: 6s;
+  transform: scale(2.15);
+}
+.soap-bubbles div:nth-child(5) {
+  animation-delay: 7s;
+  transform: scale(0.5);
+}
+.soap-bubbles div:nth-child(6) {
+  animation-delay: 4s;
+  transform: scale(2.5);
+}
+.soap-bubbles div:nth-child(7) {
+  animation-delay: 3s;
+  transform: scale(1.5);
+}

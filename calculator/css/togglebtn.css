@@ -1,0 +1,125 @@
+html {
+  --bg: #ebebeb;
+  --display-bg: linear-gradient(145deg, #b8e0ee, #47b8d4);
+  --display-shadow: 7px 7px 20px #4b6d75,
+    -7px -7px 20px #8dcfdf;
+  ;
+  --toggle-btn: #231f20;
+  --body-color: rgb(95, 123, 140);
+  --btns-color: linear-gradient(145deg, #7ca5af, #5299be);
+  --btns-hover-color: rgb(90, 135, 145);
+  --container-bg: rgb(108, 158, 170);
+  --btn-shadow: 7px 7px 20px #4b6d75,
+    -7px -7px 20px #8dcfdf;
+  --btn-hover-shadow: inset 7px 7px 20px #4b6d75,
+    inset -7px -7px 20px #8dcfdf;
+}
+
+/* background: linear-gradient(145deg, #f9b000, #24231f);
+    box-shadow: 7px 7px 20px #080a0a, -7px -7px 20px #855923b3; */
+
+html[data-theme='dark'] {
+  --bg: #434343;
+  --display-bg: linear-gradient(145deg, #f9b000, #f3b692);
+  --display-shadow: 7px 7px 20px #080a0a, -7px -7px 20px #855923b3;
+  --toggle-btn: #b5b5b5;
+  --body-color: rgb(18, 26, 31);
+  --btns-color: linear-gradient(145deg, #f9b000, #24231f);
+  --btns-hover-color: rgb(20, 28, 30);
+  --container-bg: rgb(39, 55, 59);
+  --btn-shadow: 7px 7px 20px #080a0a, -7px -7px 20px #855923b3;
+  --btn-hover-shadow: inset 7px 7px 10px #55400b,
+    inset -7px -7px 20px #dc9f09;
+  --text-bg : grey;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.toggle-container label {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggleLabel {
+  cursor: pointer;
+  width: 90px;
+  height: 40px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggleLabel:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 90px;
+}
+
+input:checked+.toggleLabel {
+  background: var(--toggle-btn);
+}
+
+input:checked+.toggleLabel:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  transition: 300ms ease-in-out;
+}
+
+.toggleLabel:active:after {
+  width: 50px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:after {
+  transition: all 300ms ease-in-out !important;
+  transition-delay: 0 !important;
+}
+
+/* sun and moon  */
+label i {
+  position: absolute;
+  width: 20px;
+  z-index: 5;
+  font-size: 1.5em;
+  top: 7px;
+}
+
+label .sun {
+  width: 20px;
+  left: 8px;
+  color: #ffdf00;
+}
+
+label .moon {
+  right: 14px;
+  color: #5d5d5d;
+}
+
+input:checked+label .sun {
+  color: #5d5d5d;
+}
+
+input:checked+label .moon {
+  color: #ffdf00;
+}
