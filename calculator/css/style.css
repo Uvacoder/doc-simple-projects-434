@@ -1,0 +1,277 @@
+@font-face{
+  font-family: Digital7Font;
+  src: url(../digital_font.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+    overflow-y: hidden;
+  }
+
+  section{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
+
+.container{
+  width: 36vw;
+  height: fit-content;
+  margin: auto;
+  background-color:var(--container-bg);
+  border-radius: 28px;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+
+.all_button{
+  border-radius: 28px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-content: center;
+  background-color:var(--container-bg);
+}
+
+
+.display{
+  font-family: 'Digital7Font',sans-serif;
+  grid-column: span 4;
+  height: 8vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: var(--display-bg);
+  box-shadow:  var(--display-shadow);
+  border: none;
+  border-radius: 32px;
+  color: rgb(26,25,25);
+  text-align: end;
+  margin: 2vw auto 1vw;
+  padding:  0 30px 0;
+  font-size: 2.2vw;
+}
+
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--btns-color);
+  box-shadow: var(--btn-shadow);
+  border: none;
+  border-radius: 50%;
+width: 3.7vw;
+  height: 3.7vw;
+  color: #1d2934;
+  line-height: 53px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 2vw;
+  text-align: center;
+  cursor: pointer;
+  margin: 1vw auto 1vw;
+}
+
+.button:hover{
+  box-shadow: var(--btn-hover-shadow);
+            
+}
+
+
+.button:active {
+  opacity: 1;
+  background-color: #d1ced1;
+  box-shadow: 0px 0px 18px #888888 inset;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.prevent-select {
+  -webkit-user-select: none; /*Safari */
+ -ms-user-select: none; /*IE 10 and IE 11 */
+ user-select: none; /* Standard syntax*/
+}
+
+
+
+@media screen and (max-width:900px) {
+  .container{
+    width: 40vw;
+  }
+  .button{
+    width: 6vw;
+    height: 6vw;
+    font-size: 2.5vw;
+  }
+  .display{
+    width: 34vw;
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width:700px) {
+  .container{
+    width: 50vw;
+  }
+  .button{
+    font-size: 3vw;
+  }
+  .display{
+    width: 41vw;
+    height: 10vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width:550px) {
+  .container{
+    width: 300px;
+  }
+  .button{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    margin: 6px auto 6px;
+  }
+  .display{
+    width: 240px;
+    height: 60px;
+    font-size: 15px;
+    margin: 10px auto 10px;
+  }
+}
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  /* font-size: 60px; */
+  font-size: 150%;
+  font-size: 4rem;
+  text-align: center;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  display: inline-block;
+  color: black;
+  color:var(--text-bg);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-40%);
+  }
+}
+
+
+
+
+.bubbles{
+  position: absolute;
+  bottom: -120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+  justify-content: space-around;
+  z-index: -1;
+}
+.bubbles span{
+  height: 60px;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: move 10s linear infinite;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+@keyframes move {
+  100%{
+    transform: translateY(-100vh);
+  }
+}
+.bubbles span.one{
+  animation-delay: 2.2s;
+  transform: scale(2.15)
+}
+.bubbles span.two{
+  animation-delay: 3.5s;
+  transform: scale(1.55)
+}
+.bubbles span.three{
+  animation-delay: 0.2s;
+  transform: scale(0.35)
+}
+.bubbles span.four{
+  animation-delay: 6s;
+  transform: scale(2.15)
+}
+.bubbles span.five{
+  animation-delay: 7s;
+  transform: scale(0.5)
+}
+.bubbles span.six{
+  animation-delay: 4s;
+  transform: scale(2.5)
+}
+.bubbles span.seven{
+  animation-delay: 3s;
+  transform: scale(1.5)
+}
+.bubbles span:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 40%;
+  transform: skew(45deg) translateX(150px);
+  background: rgba(255, 255, 255, 0.15);
+  animation: mirror 3s linear infinite;
+}
+@keyframes mirror {
+  100%{
+    transform: translateX(-450px);
+  }
+}
+.bubbles span.one:before{
+  animation-delay: 1.5s;
+}
+.bubbles span.two:before{
+  animation-delay: 3.5s;
+}
+.bubbles span.three:before{
+  animation-delay: 2.5s;
+}
+.bubbles span.four:before{
+  animation-delay: 7.5s;
+}
+.bubbles span.five:before{
+  animation-delay: 4.5s;
+}
+.bubbles span.six:before{
+  animation-delay: 0.5s;
+}
+.bubbles span.seven:before{
+  animation-delay: 6s;
+}
