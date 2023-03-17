@@ -1,0 +1,15 @@
+{
+    "short_name": "CovTrack",
+    "name": "CovTrack: Minimal Covid Tracker",
+    "theme_color": "#12191f",
+    "background_color": "#12191f",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/images/Cov (2).png",
+            "type": "image/png",
+            "sizes": "500x500"
+        }
+    ],
+    "start_url": "/?utm_source=launcher"
+}

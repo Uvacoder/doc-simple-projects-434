@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid Tracker ~ ishaanbedi</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/images/Cov.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div>
+        <hgroup class="align-center">
+          <h1>
+            <u><em>CovTrack</em></u>
+          </h1>
+          <h3>
+            <u
+              ><i
+                ><b><em>Covid Tracker</em></b></i
+              ></u
+            >
+          </h3>
+        </hgroup>
+
+        <center>
+          <u><p id="date">Date:</p></u>
+        </center>
+
+        <article>
+          <h2
+            class="display-inline"
+            data-tooltip="Data fetched from covid19api.com"
+          >
+            Global Data 🌏
+          </h2>
+          <ul>
+            <li class="new-confirmed"></li>
+            <li class="total-confirmed"></li>
+            <li class="new-deaths"></li>
+            <li class="total-deaths"></li>
+          </ul>
+        </article>
+        <article>
+          <h2
+            class="display-inline"
+            data-tooltip="Data fetched from covid19api.com"
+          >
+            Indian Data
+            <img
+              width="50"
+              src="https://images.unsplash.com/photo-1597058712635-3182d1eacc1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            />
+          </h2>
+          <ul>
+            <li class="india-new-confirmed"></li>
+            <li class="india-total-confirmed"></li>
+            <li class="india-new-deaths"></li>
+            <li class="india-total-deaths"></li>
+          </ul>
+        </article>
+      </div>
+
+      <details id="details-grid-1">
+        <summary id="summary-1">Search for a state</summary>
+        <div class="grid" id="grid-1">
+          <div class="autocomplete" style="cursor: pointer">
+            <label for="myInput2" style="margin-top: 20px"
+              >Type & choose the state name and click the <kbd>GO</kbd> button:
+            </label>
+            <input
+              id="myInput2"
+              class="input2"
+              type="text"
+              name="myCountry"
+              placeholder="Eg: Punjab"
+            />
+          </div>
+        </div>
+        <button class="button-state">GO</button>
+
+        <article id="state-div">
+          <strong>
+            <h2 id="state-name-para">State Data</h2>
+          </strong>
+          <ul>
+            <li class="state-total-confirmed"></li>
+            <li class="state-total-deaths"></li>
+            <li class="state-total-recovered"></li>
+          </ul>
+        </article>
+      </details>
+
+      <details id="details-grid-2">
+        <summary id="summary-2">Search for a country</summary>
+        <div class="grid" id="grid-2">
+          <div class="autocomplete" style="cursor: pointer">
+            <label for="myInput1" style="margin-top: 20px"
+              >Type & choose the country name and click the
+              <kbd>GO</kbd> button:
+            </label>
+            <input
+              id="myInput1"
+              class="input1"
+              type="text"
+              name="myCountry"
+              placeholder="Eg: United States Of America"
+            />
+          </div>
+        </div>
+        <button class="button-country">GO</button>
+
+        <article id="country-div">
+          <strong>
+            <h2 id="country-name-para">Countries Data</h2>
+          </strong>
+          <ul>
+            <li class="local-new-confirmed"></li>
+            <li class="local-total-confirmed"></li>
+            <li class="local-new-deaths"></li>
+            <li class="local-total-deaths"></li>
+          </ul>
+        </article>
+      </details>
+    </main>
+    <footer class="container" style="text-align: center">
+      <p>
+        Created by
+        <a href="https://www.ishaanbedi.in" target="_"
+          ><cite>Ishaan Bedi</cite></a
+        >
+      </p>
+      <p>
+        Contributed by Amit, Divyanshu, Faisal, Joan, Kinshu, Nishan, Prateek, Vivek
+      </p>
+    </footer>
+    <span
+      class="secondary outline"
+      id="change-theme-button"
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        font-size: 12px;
+        padding: 2px;
+        border: 1px solid white;
+        border-radius: 100%;
+      "
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        style="height: 30px"
+        id="sun"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+        />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        style="height: 30px"
+        id="moon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+        />
+      </svg>
+    </span>
+  </body>
+  <script src="./js/app.js"></script>
+</html>
