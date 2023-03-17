@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+
+}
+body{
+    body{
+        margin: 0;
+        transition: ease-in-out 0.6s;
+        font-family: "Lato", sans-serif; 
+        height: 100vh;
+       
+       
+    }
+   
+   
+}
+
+
+.pic{
+    width: 133px;
+    height: auto;
+    
+   
+}
+
+.pic-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+
+body, .button {
+    background-color: #f1f3f8;
+    letter-spacing: 1px;
+}
+
+.button {
+    border: 0;
+    text-decoration: none;
+    padding: 10px 20px;
+    outline: transparent;
+    font-weight: bold;
+    color: #5C5B5B;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px #e0e2e5, -10px -10px 20px #fff;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+   text-justify: center;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-align: center;
+   text-justify: center;
+   padding: 20px;
+
+  
+    
+}
+
+.button:hover{
+    box-shadow: 2px 2px 2px 0 #dfe4ea inset, -2px -2px 2px 0 #fff inset;
+    position: relative;
+    top: 1px;
+    
+
+}
+
+
+img{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    width: 35px;
+   
+}
+.opensea {
+    width: 45px;
+    
+}
+
