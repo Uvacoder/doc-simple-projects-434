@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Forecast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Feather icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+</head>
+
+<body>
+  <div id="body">
+    <div id="logo">
+      <img class='logo-content' id="img" src="media/logo.svg" alt='App Logo' />
+      <span class='logo-content' id='logo-divider'></span>
+      <h5 class='logo-content' id="app-name">Forecast</h5>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" class="search-input search-elements" placeholder="Enter city">
+      <div class="search search-elements">
+        <i data-feather="search"></i>
+      </div>
+    </div>
+    <div id="main-data" class="collapsed-data">
+      <p id="city"></p>
+      <h5 class="errorMsg"></h5>
+      <img src="media/rainy-stat.svg" alt="Status Icons" id="status">
+      <h1 id="temp"></h1>
+      <table>
+        <tr>
+          <td>Humidity</td>
+          <td class='humidity'>--</td>
+        </tr>
+        <tr>
+          <td>Wind Speed</td>
+          <td class="wind-speed">--</td>
+        </tr>
+        <tr>
+          <td>Pressure</td>
+          <td class="pressure">--</td>
+        </tr>
+        <tr>
+          <td>Cloudiness</td>
+          <td class="cloud-cover">--</td>
+        </tr>
+        <tr>
+          <td>Sunrise</td>
+          <td class="sunrise">--</td>
+        </tr>
+        <tr>
+          <td>Sunset</td>
+          <td class="sunset">--</td>
+        </tr>
+      </table>
+    </div>
+    <div id="menus">
+      <div class="options active-scale" id="celcius">&deg;C</div>
+      <div class="options" id="fahrenheit">&deg;F</div>
+      <div class="options" id="more">
+        <i data-feather="more-horizontal"></i>
+      </div>
+      <div class="options" id="toggle-search">
+        <i data-feather="search"></i>
+      </div>
+      <div class="options" id="your-location">
+        <i data-feather="navigation"></i>
+      </div>
+      <div class="options" id="info">
+        <i data-feather="info"></i>
+      </div>
+      <span class="underline"></span>
+    </div>
+    <p class="dev">
+      Made with 💛 by <a href="https://github.com/oneminch">Dawit</a> <br>
+      Weather icons made by <a href="https://www.flaticon.com/authors/elias-bikbulatov" title="Elias Bikbulatov">Elias
+        Bikbulatov</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+        href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </p>
+  </div>
+  <!-- Custom JavaScript -->
+  <script src="js/main.js" charset="utf-8"></script>
+  <script data-goatcounter="https://oneminch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
