@@ -1,0 +1,577 @@
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+:root{
+	/*	--card-height: 160px;*/
+	--card-height: 35vh;
+	--card-height-small: 20vh;
+	/*	--card-width: 120px;*/
+	--card-width: 12vw;
+	--card-width-small : 25vw;
+	/*	--card-border-radius: 10px;*/
+	--card-border-radius: 1vw;
+	--rotation: 0deg;
+	/*	--card-shadow-color: black;*/
+}
+
+html, body{
+	min-height: 100vh;
+	min-width: 100vw;
+	font-family: "BioRhyme", serif;
+}
+
+body{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;	
+	background-color: orange;
+}
+
+#landing-page{
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 35vw;
+	height: 65vh;
+	padding: 10px;
+	border-radius: calc(2 * var(--card-border-radius));
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.518);
+}
+
+#play-btn{
+	border: none;
+	background-color: white;
+	color: orange;
+	padding: 5px 15px;
+	font-size: 2rem;
+	border-radius: var(--card-border-radius);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.518);
+	transition: 300ms;
+}
+
+#play-btn:hover{
+	background-color: orange;
+	color: white;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.518);
+}
+
+#home-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 1.2vw;
+	background-color: hsla(0, 0%, 100%, 0.7);
+	font-size: 1.2rem;
+	color: grey;
+	border: 2px solid grey;
+	border-radius: 5px;
+	padding: 0 3px;
+	cursor: pointer;
+}
+
+#title-text {
+	font-family: 'Mali', cursive;
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+#footer {
+	text-decoration: none;
+	color: black;
+	font-family: 'Mali', cursive;
+}
+
+#instructions{
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+summary{
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+summary:focus{
+	outline: none;
+}
+
+main{
+	min-height: 100vh;
+	min-width: 100vw;	
+	display: none;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#name-shower{
+	position: absolute;
+	top: 0;
+	transform: translateX(-50%) translateY(var(--y, -100%));
+	left: 50%;
+	padding: 5px;
+	z-index: 10;
+	background-color: white;
+	font-size: 1rem;
+	color: red;
+	border: 2px solid red;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	transition: 700ms;
+}
+
+#name-shower.show{
+	--y : 0%;
+}
+
+#name-shower span{
+	font-style: italic;
+}
+
+#score-display, #hints-display, #deck-author-display {
+	position: absolute;
+	left: 75vw;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: hsla(0, 0%, 100%, 0.7);
+	font-size: 1.2rem;
+	color: red;
+	border: 2px solid red;
+	border-radius: 5px;
+	padding: 3px;
+	z-index: 10;
+}
+
+#deck-author-display {
+    left: 50vw;
+    top: 97vh;
+	background-color: hsla(0, 0%, 100%, 1);
+}
+
+#deck-author-display a{
+    text-decoration: none;
+	color: red;
+}
+#deck-author-display a:hover{
+    text-decoration: underline;
+}
+
+#score-display{
+	top: 15vh;
+}
+
+#hints-display{
+	top: 85vh;
+}
+
+.card-container{
+	position: relative;
+	margin: 1.2vw;
+	padding: 2.5vw;
+	display: grid;
+	grid-template-columns: repeat(3, var(--card-width));
+	grid-gap: 2.5vw;
+	justify-content: start;
+	align-content: start;
+ 	justify-items: center;
+	align-items: center;
+	border: 5px solid var(--container-border-color);
+	border-radius: calc(2 * var(--card-border-radius));
+	box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.318);
+}
+
+#source{
+	grid-template-rows: repeat(2, var(--card-height));
+	background-color: hsl(60, 100%, 75%);
+	--container-border-color: yellow;
+}
+
+#destination{
+	grid-template-rows: var(--card-height);
+	background-color: palegreen;
+	--container-border-color: green;
+}
+
+.card-wrapper{
+	animation: shrink-or-grow 700ms ease-in-out 200ms reverse both;
+	height: var(--card-height);
+	width: var(--card-width);
+	perspective: 700px;
+}
+
+.card-wrapper#dragging{
+	opacity: 0.1;
+	cursor: move;
+}
+
+.card{
+	--rotation: 0deg;
+	height: 100%;
+	width: 100%;
+	border-radius: var(--card-border-radius);
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateY(var(--rotation) );
+	transition: transform 500ms ease-in-out;
+	box-shadow: 0px 0px 15px 5px var(--card-shadow-color, rgba(0, 0, 0, 0.518));
+}
+
+.card.flipped{
+	--rotation: 180deg;
+}
+
+.card-wrapper.correct .card{
+	animation: correct 600ms ease-in-out 200ms 2 alternate;
+	--card-shadow-color: green;
+	filter: none;
+}
+
+.card-wrapper.correct{
+	animation: shrink-or-grow 700ms ease-in-out 1600ms forwards;
+}
+
+@keyframes correct{
+	0%{
+		transform: rotateY(var(--rotation));
+	}
+	100%{
+		transform: rotateY(calc(var(--rotation) + 360deg));
+	}
+}
+
+@keyframes shrink-or-grow{
+	0%{
+		transform: scale(1, 1);		
+	}
+	20%{
+		transform: scale(1.1, 1.1);
+	}
+	100%{
+		transform: scale(0, 0);
+	}
+}
+
+.card-wrapper.correct::after{
+	content: '✔️';
+	text-shadow: 2px 2px 10px black;
+	font-size: 4.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0, 0);
+	animation: mark 1000ms ease-in 200ms 2 alternate;
+}
+
+.card-wrapper.wrong .card{
+	animation: wrong 250ms ease-in-out 200ms 3;
+	--card-shadow-color: red;
+	filter: none;
+}
+
+.card-wrapper.wrong{
+	animation: none;
+}
+
+@keyframes wrong{
+	0%{
+		transform: rotateY(var(--rotation)) translateX(0px);
+	}
+	25%{
+		transform: rotateY(var(--rotation)) translateX(-10px);
+	}
+	50%{
+		transform: rotateY(var(--rotation)) translateX(0px);
+	}
+	75%{
+		transform: rotateY(var(--rotation)) translateX(10px);
+	}	
+	100%{
+		transform: rotateY(var(--rotation)) translateX(0px);
+	}
+}
+
+.card-wrapper.wrong::after{
+	content: '❌';
+	text-shadow: 2px 2px 10px black;
+	font-size: 5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0, 0);
+	animation: mark 700ms ease-in 200ms 2 alternate;
+}
+
+@keyframes mark{
+	0%{
+		transform: translate(-50%, -50%) scale(0, 0);
+	}
+	60%{
+		transform: translate(-50%, -50%) scale(1.4, 1.4);
+	}
+	85%{
+		transform: translate(-50%, -50%) scale(1, 1);
+	}
+	100%{
+		transform: translate(-50%, -50%) scale(1, 1);	
+	}
+}
+
+.front-face, .back-face{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: var(--card-border-radius);
+	border: 4px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	backface-visibility: hidden;
+}
+
+.back-face{
+	background-color: blue;
+	transform: rotateY(180deg);
+	justify-content: center;
+	text-align: center;
+	color: white;
+}
+
+.front-face{
+	background-color: salmon;
+	transform: rotateY(0deg);
+	justify-content: space-evenly;
+}
+
+.primary, .secondary{
+	user-select: none;
+}
+
+.primary{
+	font-size: 4.5rem;
+}
+
+.secondary{
+	font-size: 2.5rem;
+}
+
+#card-drop-position{
+	height: var(--card-height);
+	width: var(--card-width);
+	position: relative;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	color: grey;
+	opacity: 0.7;
+}
+
+#card-drop-position > #matcher {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#card-drop-position.dragged-over{
+	color: hsl(120, 100%, 25%);
+	opacity: 1;
+}
+
+#card-drop-position::after{
+	content: '';
+	position: absolute;
+	top: -4px;
+	bottom: -4px;
+	left: -4px;
+	right: -4px;
+	border: 4px dashed grey;
+	border-radius: var(--card-border-radius);
+	opacity: 0.7;
+}
+
+#card-drop-position.dragged-over::after{
+	border-color: hsl(120, 100%, 25%);
+	opacity: 1;
+}
+
+
+@media screen and (max-width : 1110px){
+	#landing-page{
+		width: 45vw;
+	}
+}
+
+@media screen and (max-width : 860px){
+	#landing-page{
+		width: 65vw;
+	}
+	main{
+		flex-direction: column;
+		justify-content: center;
+		gap : 15px;
+	}
+	.card-container{
+		width: 90vw;
+		grid-template-columns: repeat(3, var(--card-width-small));
+	}
+	#source{
+		grid-template-rows: repeat(2, var(--card-height-small));
+	}
+	#destination{
+		grid-template-rows: var(--card-height-small);
+	}
+	#score-display{
+		top : 4vh;
+		left: 20vw;
+	}
+	#hints-display{
+		top : 4vh;
+	}
+	#deck-author-display{
+		width: 60vw;
+		text-align: center;
+	}
+	.card-wrapper{
+		height: 20vh;
+		width: 22vw;
+	}
+	.primary{
+		font-size: 4rem;
+	}	
+	.secondary{
+		font-size: 2.5rem;
+	}
+	#card-drop-position{
+		height: 20vh;
+		width: 22vw;
+	}
+}
+
+
+@media screen and (max-width : 520px){
+	#landing-page{
+		width: 80vw;
+	}
+	.card-wrapper{
+		height: 20vh;
+		width: 26vw;
+	}
+	.primary{
+		font-size: 3.5rem;
+	}	
+	.secondary{
+		font-size: 2rem;
+	}
+	
+}
+
+/*
+Excluding the container in its hidden state from this rule might appear
+counter-intuitive, but it is required for the animation to work correctly.
+Display will be set to none for the hidden state using javascript.
+*/
+#modal-container:not(.hidden) {
+	opacity: 0;
+	display: none;
+}
+
+#modal-container, #modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+}
+
+#modal-container.visible {
+	display: block;
+	animation: modal-fadein 300ms ease-out 1 forwards;
+}
+
+#modal-container.hidden {
+	animation: modal-fadeout 300ms ease-out 1 forwards;
+}
+
+@keyframes modal-fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes modal-fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+#modal-overlay {
+	background-color: rgba(0, 0, 0, 0.518);
+	backdrop-filter: blur(2px);
+}
+
+#modal-box{
+	width: fit-content;
+	max-width: 60vw;
+	min-width: 300px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: orange;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+	border-radius: calc(2 * var(--card-border-radius));
+	box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.318);
+	padding: 16px;
+	z-index: 1001;
+}
+
+#modal-title {
+	font-family: 'Mali', cursive;
+	font-size: 2rem;
+	text-align: center;
+	margin: 8px 0;
+}
+
+#modal-content {
+	margin: 8px 0;
+}
+
+#modal-actions {
+	display: flex;
+	justify-content: end;
+}
+
+#modal-confirm, #modal-cancel{
+	border: none;
+	background-color: white;
+	color: orange;
+	padding: 5px 15px;
+	border-radius: calc(var(--card-border-radius) / 2);
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.518);
+	transition: 300ms;
+	margin: 0 8px;
+}
+
+#modal-confirm:hover, #modal-cancel:hover{
+	background-color: orange;
+	color: white;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.518);
+	cursor: pointer;
+}
+
+
+#audio-button {
+	position: absolute;
+    top: 0;
+    margin: 1.2vw;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    font-size: 0;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+    right: 0;
+}
