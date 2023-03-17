@@ -1,0 +1,590 @@
+// Size Mixin: Width + Height
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+// Background Color Mixin
+@mixin bkg($bkg) {
+  background-color: $bkg;
+}
+// Mixin: Transition
+@mixin transition($seconds) {
+  transition: $seconds;
+  -o-transition: $seconds;
+  -moz-transition: $seconds;
+  -webkit-transition: $seconds;
+}
+// Mixin: Box Shadow
+@mixin box-shadow($prop) {
+  box-shadow: $prop;
+  -o-box-shadow: $prop;
+  -ms-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  -webkit-box-shadow: $prop;
+}
+// Mixin: Transform
+@mixin transform($property) {
+  transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  -webkit-transform: $property;
+}
+// Every Element
+* {
+  border-radius: 0px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -ms-appearance: none !important;
+  -o-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  @include transition(0.3s);
+  font-family: 'Quicksand', sans-serif;
+}
+// Every Link
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+// Every list
+li {
+  list-style-type: none;
+}
+// Unselectable icons and logo
+i, #logo {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+// Custom scrollbar
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  @include box-shadow(none);
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+body, html {
+  background-color: #ecf0f1 !important;
+  min-height: 100%;
+}
+// Header: Logo and options
+#header {
+  @include size(100%, 60px);
+  @include bkg(#fff);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #000;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+  // Navigation icon
+  .nav-icon {
+    @include size(40px, 50px);
+    @include bkg(#fff);
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    border: none;
+    i {
+      font-size: 20px;
+    }
+  }
+  // Logo
+  #logo {
+    width: 110px;
+    height: 45px;
+    margin: 7.5px auto;
+    .logo-content {
+      display: inline-block;
+      height: 45px;
+      float: left;
+      line-height: 45px;
+    }
+    #img {
+      width: 45px;
+      height: 45px;
+      padding: 7.5px;
+    }
+    #logo-divider {
+      width: 1px;
+      height: 20px;
+      margin-top: 12.5px;
+      background: #1abc9c;
+    }
+    #app-name {
+      width: 64px;
+      height: 45px;
+      padding: 0px 7.5px;
+      color: #1abc9c;
+      margin-top: 0px;
+    }
+  }
+  // Options opener
+  #options-btn {
+    @include size(40px, 50px);
+    @include bkg(#fff);
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    border: none;
+    i {
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+  // Options tooltip
+  #option-holder {
+    @include size(50px,50px);
+    @include bkg(#fff);
+    @include box-shadow(1px 1px 15px rgba(0,0,0,0.15));
+    position: absolute;
+    top: 50px;
+    right: 12.5px;
+    display: none;
+    border-radius: 2px !important;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      bottom: 100%;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #e74c3c transparent;
+    }
+    // Buttons
+    .options {
+      @include size(50px,50px);
+      z-index: 50;
+      cursor: pointer;
+      float: left;
+      text-align: center;
+      background: transparent;
+      border: none;
+      border-radius: 2px !important;
+      box-sizing: border-box;
+      // Delete all
+      &:first-of-type {
+        @include bkg(#e74c3c);
+        i {
+          line-height: 50px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// Navigation menu
+#nav-menu {
+  @include size(350px,100vh);
+  @include bkg(#fff);
+  @include box-shadow(1px 1px 10px rgba(0,0,0,0.15));
+  position: absolute;
+  top: 0px;
+  left: -450px;
+  z-index: 12;
+  padding: 50px 0px;
+  #profile-picture {
+    @include size(100px,100px);
+    margin: 20px auto;
+    border: 1px solid #2ecc71;
+    border-radius: 50% !important;
+    display: block;
+  }
+  #username {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  // Navigation icon
+  .nav-icon {
+    @include size(40px, 50px);
+    @include bkg(#fff);
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border: none;
+    i {
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+  #task-count {
+    @include size (50%, 30px);
+    margin: 30px auto;
+    #count-divider {
+      @include size (1px, 30px);
+      @include bkg(#ccc);
+      border-radius: 15px !important;
+      margin: 0px auto;
+      display: inline-block;
+    }
+    .counters {
+      @include size (calc(50% - 0.5px), 30px);
+      @include bkg(#fff);
+      float: left;
+      padding: 0px 15px;
+      border: none;
+      i {
+        color: #fff;
+        float: left;
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
+    #todo-counter {
+      float: left;
+      color: #e74c3c;
+      i {
+        color: #e74c3c;
+      }
+    }
+    #done-counter {
+      float: right;
+      color: #2ecc71;
+      i {
+        color: #2ecc71;
+      }
+    }
+  }
+  #navig-menus {
+    @include size (50%, 200px);
+    margin: 50px auto 30px auto;
+    .navig-menus {
+      @include size (100%, 40px);
+      @include bkg(#1abc9c);
+      margin: 10px 0px;
+      color: #fff;
+      border-radius: 20px !important;
+      border: none;
+      i {
+        color: #fff;
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    i {
+      color: #e74c3c;
+    }
+  }
+}
+// Input container
+#input-holder {
+  @include size(70%,40px);
+  @include box-shadow(1px 1px 5px rgba(0,0,0,0.15));
+  margin: auto;
+  position: relative;
+  top: 85px;
+  border-radius: 2px !important;
+  border: none;
+  // overflow: hidden;
+  // Input
+  #input {
+    @include bkg(#fff);
+    @include box-shadow(none);
+    height: 40px;
+    border: none;
+    font-size: 16px !important;
+    &:focus {
+      @include box-shadow(none);
+    }
+  }
+  // Add button
+  #add-task {
+    @include bkg(#2ecc71);
+    @include size(40px,40px);
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+  }
+}
+// Tasks to be done
+#todo {
+  @include size(80%,auto);
+  margin-top: 30px;
+  max-width: 625px;
+  // Each uncompleted task
+  .task {
+    @include box-shadow(1px 1px 5px rgba(0,0,0,0.15));
+    width: 100%;
+    border-radius: 2px !important;
+    background: #fff;
+    height: auto;
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding: 10px 5px 10px 10px;
+    border-left: 5px solid #e74c3c;
+    // Unchecked Checkbox
+    .check-task {
+      @include size(20px,20px);
+      @include bkg(#ccc);
+      cursor: pointer;
+      float: left;
+      text-align: center;
+      margin-right: 10px;
+      border-radius: 2px !important;
+      i {
+        font-size: 18px;
+        color: #ccc;
+      }
+    }
+    // Task name
+    .task-name {
+      width: 70%;
+      display: inline-block;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    // Delete and edit icons
+    .task-options {
+      height: 20px;
+      cursor: pointer;
+      padding: 0px 5px;
+      float: right;
+      i {
+        color: #ccc;
+        line-height: 20px;
+      }
+    }
+    .delete-task {
+      border-left: 1px dotted #ccc;
+      &:hover i {
+        color: #e74c3c;
+      }
+    }
+    .edit-task {
+      &:hover i {
+        color: #e7a514;
+      }
+    }
+  }
+}
+// Completed Tasks
+#done {
+  @include size(80%,auto);
+  max-width: 625px;
+  // Each completed task
+  .done-task {
+    @include box-shadow(1px 1px 5px rgba(0,0,0,0.15));
+    width: 100%;
+    height: auto;
+    background: #fff;
+    min-height: 40px;
+    margin-bottom: 20px;
+    border-radius: 2px !important;
+    padding: 10px 5px 10px 10px;
+    border-left: 5px solid #2ecc71;
+    // Checked Checkbox
+    .checked-task {
+      @include size(20px,20px);
+      @include bkg(#2ecc71);
+      color: #fff;
+      float: left;
+      cursor: pointer;
+      text-align: center;
+      margin-right: 10px;
+      i {
+        font-size: 18px;
+      }
+    }
+    // Task name
+    .task-name {
+      color: #a6a5a4;
+      width: 70%;
+      display: inline-block;
+      font-weight: none;
+      vertical-align: middle;
+    }
+    // Delete and edit icons
+    .task-options {
+      height: 20px;
+      cursor: pointer;
+      padding: 0 5px;
+      line-height: 20px;
+      float: right;
+      i {
+        color: #ccc;
+        margin-top: -3px;
+      }
+    }
+    .delete-task {
+      border-left: 1px dotted #ccc;
+      &:hover i {
+        color: #e74c3c;
+      }
+    }
+    .edit-task {
+      &:hover i {
+        color: #e7a514;
+      }
+    }
+  }
+}
+// Transparent background
+#transparent-bkg {
+  @include size(100%,100%);
+  @include bkg(#000);
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 11;
+  display: none;
+}
+#editPopup {
+  @include size(70%,200px);
+  @include bkg(#fff);
+  @include box-shadow(1px 1px 5px rgba(0,0,0,0.15));
+  position: fixed;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -35%;
+  z-index: 12;
+  display: none;
+  .closePopup {
+    @include size(30px,30px);
+    color: red;
+    border: none;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+#edit-input {
+  @include size(75%,30px);
+  @include bkg(#fff);
+  text-indent: 10px;
+  display: block;
+  position: absolute;
+  margin-top: -25px;
+  top: 50%;
+  margin-left: -37.5%;
+  left: 50%;
+  font-size: 16px !important;
+  border: none;
+  border: 0.5px solid #e7a514;
+}
+#save {
+  @include size(60px,30px);
+  @include bkg(#e7a514);
+  text-align: center;
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  margin-left: -25px;
+  left: 50%;
+  border: none;
+}
+// Notifications
+.notif {
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  margin: 25px 0px;
+}
+#done-notif {
+  display: none;
+}
+// Line Breaks
+.break {
+  .task-status {
+    @include size(20px,20px);
+    border-radius: 50% !important;
+    margin: 0px auto;
+    text-align: center;
+    i {
+      color: #fff;
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: 50% !important;
+    }
+  }
+  hr {
+    width: 200px;
+    margin: -10px auto 0px auto;
+    border: 0.5px solid #eee;
+  }
+}
+// Between input and tasks
+#input-break {
+  margin: 125px auto 0px auto;
+  .task-status {
+    @include bkg(#e74c3c);
+    display: none;
+  }
+  hr {
+    border: 0.5px solid #eee;
+  }
+}
+// Between todo and done tasks
+#task-break {
+  margin: 30px auto 40px auto;
+  display: none;
+  .task-status {
+    @include bkg(#2ecc71);
+  }
+  hr {
+    border: 0.5px solid #2ecc71;
+  }
+}
+// Small screens (< 425px)
+@media only screen and (max-width: 425px) {
+  // Tasks to be done
+  #done .done-task .task-name,
+  #todo .task .task-name {
+    width: 55%;
+  }
+  #nav-menu {
+    width: 100%;
+  }
+}
+// Small screens (< 480px)
+@media only screen and (max-width: 480px) {
+  // Tasks to be done
+  #done, #todo {
+    @include size(95%,auto);
+  }
+  #input-holder {
+    @include size(85%,auto);
+  }
+  #editPopup {
+    @include size(85%,400px);
+    position: fixed;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -42.5%;
+  }
+}
+// Wide screen (> 768px)
+@media only screen and (min-width: 768px) {
+  #editPopup {
+    max-width: 500px;
+    margin-left: -250px;
+    left: 50%;
+  }
+  #input-holder {
+    max-width: 500px;
+  }
+}
