@@ -1,0 +1,17 @@
+[
+	{
+		"task":"Type a task."
+	},
+	{
+		"task":"Click the '+' button to add it to the list."
+	},
+	{
+		"task":"Edit a task by clicking the pencil icon."
+	},
+	{
+		"task":"Delete a task by clicking the delete icon."
+	},
+	{
+		"task":"Complete a task by clicking the box on the left."
+	}
+]
