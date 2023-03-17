@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <title>Dolist</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- custom stylesheet -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+      <!-- Material Icons -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Font Awesome -->
+      <script src="https://use.fontawesome.com/512a791d9f.js"></script>
+      <!-- Ionicons -->
+      <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+      <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Bootstrap JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+  </head>
+  <body>
+    <!-- Transparent background -->
+    <div id="transparent-bkg"></div>
+    <!-- App title: Dolist -->
+    <div id='header'>
+      <button class="nav-icon">
+        <i class="material-icons">menu</i>
+      </button>
+      <div id="logo">
+        <img class='logo-content' id="img" src="media/logo.svg" alt='App Logo'/>
+        <span class='logo-content' id='logo-divider'></span>
+        <h4 class='logo-content' id="app-name">Dolist</h4>
+      </div>
+      <button id="options-btn" class="pull-right">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <div id="option-holder">
+        <div class="options" id="del-all" title="Remove All Tasks">
+          <i class="material-icons">delete_sweep</i>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation menu -->
+    <div id="nav-menu">
+      <button class="nav-icon">
+        <i class="material-icons">arrow_backward</i>
+      </button>
+      <img src="media/profile.png" id="profile-picture"/>
+      <p id="username">User</p>
+      <div id="task-count">
+        <button class="counters" id="todo-counter">
+          <i class="material-icons">error</i>
+          <span>12</span>
+        </button>
+        <div id="count-divider"></div>
+        <button class="counters" id="done-counter">
+          <i class="material-icons">done_all</i>
+          <span>12</span>
+        </button>
+      </div>
+      <div id="navig-menus">
+        <button class="navig-menus" id="settings">
+          <i class="fa fa-sliders"></i> Settings
+        </button>
+        <button class="navig-menus" id="account">
+          <i class="fa fa-user-o"></i> Account
+        </button>
+        <button class="navig-menus" id="logout">
+          <i class="fa fa-sign-out"></i> Logout
+        </button>
+      </div>
+      <p>
+        Made with <i class="fa fa-heart"></i> by <a href="https://github.com/oneminch">Dawit</a>
+      </p>
+    </div>
+    <!-- Input -->
+    <div id="input-holder" class="input-group">
+      <input id="input" type="text" class="form-control" placeholder="Enter Task">
+      <div class="input-group-btn">
+        <button id="add-task" class="text-center">
+          <i class="ion-ios-plus-empty"></i>
+        </button>
+      </div>
+    </div>
+    <div id="input-break" class="break">
+      <div class="task-status">
+        <i class="material-icons">error</i>
+      </div>
+      <hr>
+    </div>
+    <!-- To Do Tasks -->
+    <p id="todo-notif" class="notif">
+      You have no tasks to complete.
+    </p>
+    <div id="todo" class="center-block">
+      <!-- <li class="task">
+        <span class="check-task"></span>
+        <span class="task-name">Task</span>
+        <span class="delete-task task-options"><i class="material-icons">delete</i></span>
+        <span class="edit-task task-options"><i class="material-icons">edit</i></span>
+      </li> -->
+    </div>
+    <div id="task-break" class="break">
+      <div class="task-status">
+        <i class="material-icons">done_all</i>
+      </div>
+      <hr>
+    </div>
+    <!-- Done Tasks -->
+    <p id="done-notif" class="notif">
+      You have no completed tasks.
+    </p>
+    <div id="done" class="center-block">
+      <!-- <li class="done-task">
+        <span class="checked-task pull-left"><i class="material-icons">done</i></span>
+        <span class="task-name">Task One</span>
+        <span class="delete-task pull-right"><i class="material-icons">delete</i></span>
+      </li> -->
+    </div>
+    <!-- Edit Popup -->
+    <div id="editPopup">
+      <i class="ion-ios-close-outline closePopup"></i>
+      <input type="text" id="edit-input">
+      <button id="save">Save</button>
+    </div>
+    <script src='js/main.js'></script>
+  </body>
+</html>
